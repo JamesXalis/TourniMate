@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Home from './components/Home';
 import Tournaments from './components/Tournaments';
 import Courses from './components/Courses';
