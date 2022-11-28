@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
+const { User, Course, Tournament } = require('../Models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -12,12 +12,12 @@ const resolvers = {
         },
         courses: async (parent, args, context) => {
             if (context.user) {
-
+                return Course.find()
             }
         },
         tournaments: async (parent, args, context) => {
             if (context.user) {
-
+                return Tournament.find()
             }
         }
     },
