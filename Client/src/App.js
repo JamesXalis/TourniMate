@@ -14,20 +14,11 @@ function App(){
 return(
   <Router>
     <Routes>
-      <Route exact path= '/'>
-        <Home />
-      </Route>
-      <Route path='/Courses'>
-        <Courses />
-      </Route>
-      <Route path='/Courses/Tournaments'>
-        <Tournaments />
-      </Route>
-      <Route path='/profile'>
-        <Profile />
-      </Route>
+      <Route path= '/' element={<Home />} />
+      <Route path='/Courses' element={<Courses />} />
+      <Route path='/Courses/Tournaments' element={<Tournaments />} />
+      <Route path='/profile' element={<Profile />} />
     </Routes>
-    <App />
   </Router>
 );    
 }
