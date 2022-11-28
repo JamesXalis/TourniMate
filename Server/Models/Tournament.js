@@ -3,22 +3,20 @@ const { Schema, model } = require('mongoose');
 // Schema to create tournament model
 const tournamentSchema = new Schema(
     {
-        published: {
-            type: Boolean,
-            default: false,
+        tournameName: {
+            type: String,
+            required: true,
         },
-        createdAt: {
+        tournamentDate: {
             type: Date,
             default: Date.now,
         },
-        meta: {
-            players: Number,
-            bookmarks: Number,
-        },
-        description: {
+        tournamentDescription: {
             type: String,
-            minLength: 15,
-            maxLength: 500,
+            required: true,
+        },
+        tournamentImage: {
+            type: String,
         },
     },
     {
