@@ -1,5 +1,8 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
+const { Tournament } = require('../Models');
+
+const tournamentSchema = require('./Tournament')
 
 const userSchema = new Schema({
     username: {
@@ -19,13 +22,14 @@ const userSchema = new Schema({
         required: true,
         minlength: 8,
     },
-    tournaments: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'Tournament',
+    tournaments: [tournamentSchema],
+},
+    {
+        toJSON: {
+            virtuals: true,
         },
-    ],
-});
+    }
+);
 
 userSchema.pre('save', async function (next) {
     if (this.isNew || this.isModified('password')) {

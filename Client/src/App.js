@@ -1,36 +1,36 @@
-import React, { useState } from "react";
-import NavTabs from "./components/NavTabs";
-//import Home from "./components/Home";
-//import Tournaments from "./components/Tournaments";
-//import Courses from "./components/Courses";
-//import Profile from "./components/Profile";
-import PageHeader from "./components/PageHeader";
+import React, { useState } from 'react';
+import Home from './components/Home';
+import Tournaments from './components/Tournaments';
+import Courses from './components/Courses';
+import Profile from './components/Profile';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
 
-function App() {
-  const [currentPage, setCurrentPage] = useState("Home");
-
-  //  const renderPage = () => {
-  //    if (currentPage === "Home") {
-  //      return <Home />;
-  //    }
-  //    if (currentPage === "Courses") {
-  //      return <Courses />;
-  //    }
-  //    if (currentPage === "Profile") {
-  //      return <Profile />;
-  //    }
-  //return <Tournaments />;
-  //  };
-
-  const handlePageChange = (page) => setCurrentPage(page);
-
-  return (
-    <div>
-      <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
-      <PageHeader heading={"Welcome to my Application"} />
-      {/*{renderPage()}*/}
-    </div>
-  );
+function App(){
+ 
+return(
+  <Router>
+    <Routes>
+      <Route exact path= '/'>
+        <Home />
+      </Route>
+      <Route path='/Courses'>
+        <Courses />
+      </Route>
+      <Route path='/Courses/Tournaments'>
+        <Tournaments />
+      </Route>
+      <Route path='/profile'>
+        <Profile />
+      </Route>
+    </Routes>
+    <App />
+  </Router>
+);    
 }
+
 
 export default App;
