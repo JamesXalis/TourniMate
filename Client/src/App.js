@@ -14,18 +14,18 @@ import {
 
 
 
- function usePageViews() {
+function usePageViews() {
   const [inIndex, setInIndex] = useState();
-   let location = useLocation();
+  let location = useLocation();
 
-  React.useEffect (() => {
-    setInIndex(location.pathname === '/') 
+  React.useEffect(() => {
+    setInIndex(location.pathname === '/')
   }, [location.pathname]);
   console.log(inIndex);
 
   return null
- }
-    
+}
+
 // function App(){
 //   usePageViews();
 //   return<Switch>...</Switch>;
