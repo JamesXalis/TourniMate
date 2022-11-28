@@ -5,15 +5,12 @@ const tournamentSchema = new Schema(
     {
         tournameName: {
             type: String,
-            required: true,
         },
         tournamentDate: {
-            type: Date,
-            default: Date.now,
+            type: String,
         },
         tournamentDescription: {
             type: String,
-            required: true,
         },
         tournamentImage: {
             type: String,
