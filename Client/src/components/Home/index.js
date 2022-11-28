@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import'./Home.css';
+import'./home.css';
 
 function Home() {
     return (
@@ -10,3 +10,5 @@ function Home() {
         
     )
 }
+
+export default Home;
