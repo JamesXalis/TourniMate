@@ -3,36 +3,55 @@ import NavTabs from './components/NavTabs';
 import Home from './components/Home';
 import Tournaments from './components/Tournaments';
 import Courses from './components/Courses';
-import Profile from './components/Profile'
+import Profile from './components/Profile';
+import ReactDOM from "react-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  useLocation
+} from "react-router-dom";
 
 
 
+ function usePageViews() {
+  const [inIndex, setInIndex] = useState();
+   let location = useLocation();
 
- function App() {
-  const [currentPage, setCurrentPage] = useState('Home');
+  React.useEffect (() => {
+    setInIndex(location.pathname === '/') 
+  }, [location.pathname]);
+  console.log(inIndex);
 
-  const renderPage = () => {
-    if (currentPage === 'Home') {
-      return <Home />;
-    }
-    if (currentPage === 'Courses') {
-      return <Courses />;
-    }
-    if (currentPage === 'Profile'){
-      return <Profile />;
-    }
-    return <Tournaments />;
-  };
+  return null
+ }
+    
+// function App(){
+//   usePageViews();
+//   return<Switch>...</Switch>;
+// }
 
-  const handlePageChange = (page) => setCurrentPage(page);
-
-  return (
+// ReactDOM.render(
+//   <Router>
+//     <Switch>
+//       <Route exact path= '/'>
+//         <Home />
+//       </Route>
+//       <Route path='/Courses'>
+//         <Courses />
+//       </Route>
+//       <Route path='/Courses/Tournaments'>
+//         <Tournaments />
+//       </Route>
+//       <Route path='/profile'>
+//         <Profile />
+//       </Route>
+//     </Switch>
+//     <App />
+//   </Router>,
+//   node
+// );
      
-    <div>
-      <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
-      {renderPage()}
-    </div>
-  );
-}
+  
 
-export default App
+export default usePageViews;
