@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
-import NavTabs from './components/NavTabs';
 import Home from './components/Home';
 import Tournaments from './components/Tournaments';
 import Courses from './components/Courses';
 import Profile from './components/Profile';
-import ReactDOM from "react-dom";
 import {
   BrowserRouter as Router,
   Route,
+  Routes,
 } from "react-router-dom";
 
+
+
+ 
     
 function App(){
-
-ReactDOM.render(
+ 
+return(
   <Router>
+    <Routes>
       <Route exact path= '/'>
         <Home />
       </Route>
@@ -27,9 +30,10 @@ ReactDOM.render(
       <Route path='/profile'>
         <Profile />
       </Route>
+    </Routes>
     <App />
-  </Router>,
-);
+  </Router>
+);    
 }
 
 export default App;

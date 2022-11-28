@@ -7,7 +7,7 @@ function Home() {
         <div className='Home'>
             <h1>TourniMate</h1>
         </div>
-        
+
     )
 }
 
