@@ -1,26 +1,34 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./navTabs.css";
+import {useLocation} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-function NavTabs({ currentPage, handlePageChange }) {
+function NavTabs() {
+    const [currentPage, setCurrentPage] = useState();
+    let location = useLocation();
+ 
+   useEffect (() => {
+     setCurrentPage(location.pathname) 
+   }, [location.pathname]);
   return (
     <div className="headerNav-container ">
       <Header />
       <ul className="nav nav-tabs ">
         <li className="nav-item">
-          <a
-            href="#"
+          <Link
+            to ={`/`}
             onClick={() => handlePageChange("Home")}
             className={
-              currentPage === "Home" ? "nav-link active" : "nav-link NavColor"
+              currentPage === "/" ? "nav-link active" : "nav-link NavColor"
             }
           >
             Home
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a
-            href="#Courses"
+          <Link
+            to={`/Courses`}
             onClick={() => handlePageChange("Courses")}
             className={
               currentPage === "Courses"
@@ -29,11 +37,11 @@ function NavTabs({ currentPage, handlePageChange }) {
             }
           >
             Courses
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a
-            href="#Tournaments"
+          <Link
+            to={`/Courses/Tournaments`}
             onClick={() => handlePageChange("Tournaments")}
             className={
               currentPage === "Tournaments"
@@ -42,11 +50,11 @@ function NavTabs({ currentPage, handlePageChange }) {
             }
           >
             Tournaments
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a
-            href="#Profile"
+          <Link
+            to={`/Profile`}
             onClick={() => handlePageChange("Profile")}
             className={
               currentPage === "Profile"
@@ -55,7 +63,7 @@ function NavTabs({ currentPage, handlePageChange }) {
             }
           >
             Profile
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
