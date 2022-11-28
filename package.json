@@ -23,6 +23,8 @@
     "homepage": "https://github.com/JamesXalis/TourniMate#readme",
     "devDependencies": {
         "concurrently": "^5.1.0",
-        "graphql": "^16.6.0"
+        "graphql": "^16.6.0",
+        "express":"4.17.1",
+        "mongoose":"6.0.13"
     }
 }
