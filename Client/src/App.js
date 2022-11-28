@@ -27,7 +27,6 @@ return(
         <Profile />
       </Route>
     </Routes>
-    <App />
   </Router>
 );    
 }
