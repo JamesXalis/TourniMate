@@ -1,0 +1,27 @@
+[
+    {
+      "username": "Dustin",
+      "email": "dustin@email.com",
+      "password": "tournimate"
+    },
+    {
+      "username": "Brandon",
+      "email": "brandon@email.com",
+      "password": "tournimate"
+    },
+    {
+      "username": "James",
+      "email": "james@email.com",
+      "password": "tournimate"
+    },
+    {
+      "username": "Andrew",
+      "email": "andrew@email.com",
+      "password": "tournimate"
+    },
+    {
+      "username": "Brittany",
+      "email": "brittany@email.com",
+      "password": "tournimate"
+    }
+]
