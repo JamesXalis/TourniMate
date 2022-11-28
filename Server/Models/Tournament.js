@@ -1,4 +1,4 @@
-const { Schema } = require('mongoose');
+const { Schema   } = require('mongoose');
 
 // Schema to create tournament model
 const tournamentSchema = new Schema(
