@@ -51,7 +51,5 @@ import {
 //   </Router>,
 //   node
 // );
-     
-  
 
 export default usePageViews;

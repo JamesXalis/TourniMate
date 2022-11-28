@@ -1,24 +1,19 @@
-const { Schema, model } = require('mongoose');
+const { Schema } = require('mongoose');
 
 // Schema to create tournament model
 const tournamentSchema = new Schema(
     {
-        published: {
-            type: Boolean,
-            default: false,
-        },
-        createdAt: {
-            type: Date,
-            default: Date.now,
-        },
-        meta: {
-            players: Number,
-            bookmarks: Number,
-        },
-        description: {
+        tournameName: {
             type: String,
-            minLength: 15,
-            maxLength: 500,
+        },
+        tournamentDate: {
+            type: String,
+        },
+        tournamentDescription: {
+            type: String,
+        },
+        tournamentImage: {
+            type: String,
         },
     },
     {
@@ -30,14 +25,14 @@ const tournamentSchema = new Schema(
 );
 
 // Create a virtual property `upvoteCount` that gets the amount of comments per user
-tournamentSchema
-    .virtual('playerCount')
-    // Getter
-    .get(function () {
-        return this.meta.players;
-    });
+// tournamentSchema
+//     .virtual('playerCount')
+//     // Getter
+//     .get(function () {
+//         return this.meta.players;
+//     });
 
 // Initialize our Post model
-const Tournament = model('tournament', tournamentSchema);
+// const Tournament = model('tournament', tournamentSchema);
 
-module.exports = Tournament;
+module.exports = tournamentSchema;
