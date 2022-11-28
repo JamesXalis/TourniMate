@@ -5,6 +5,7 @@ const courseSchema = new Schema(
     {
         name: String,
         description: String,
+        location: String,
     },
     {
         // Mongoose supports two Schema options to transform Objects after querying MongoDb: toJSON and toObject.
@@ -17,7 +18,7 @@ const courseSchema = new Schema(
 );
 
 // Create a virtual property `fullName` that gets and sets the courses name
-userSchema
+courseSchema
     .virtual('courseName')
     // Getter
     .get(function () {

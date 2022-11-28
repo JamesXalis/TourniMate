@@ -8,7 +8,7 @@ import Profile from './components/Profile'
 
 
 
- function App() {
+function App() {
   const [currentPage, setCurrentPage] = useState('Home');
 
   const renderPage = () => {
@@ -18,7 +18,7 @@ import Profile from './components/Profile'
     if (currentPage === 'Courses') {
       return <Courses />;
     }
-    if (currentPage === 'Profile'){
+    if (currentPage === 'Profile') {
       return <Profile />;
     }
     return <Tournaments />;
@@ -27,7 +27,7 @@ import Profile from './components/Profile'
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-     
+
     <div>
       <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
       {renderPage()}
