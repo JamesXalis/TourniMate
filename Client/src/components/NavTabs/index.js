@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./navTabs.css";
 import {useLocation} from 'react-router-dom';
@@ -13,12 +14,11 @@ function NavTabs() {
    }, [location.pathname]);
   return (
     <div className="headerNav-container ">
-      <Header />
       <ul className="nav nav-tabs ">
         <li className="nav-item">
           <Link
             to ={`/`}
-            onClick={() => handlePageChange("Home")}
+            onClick={() => setCurrentPage("Home")}
             className={
               currentPage === "/" ? "nav-link active" : "nav-link NavColor"
             }
@@ -29,7 +29,7 @@ function NavTabs() {
         <li className="nav-item">
           <Link
             to={`/Courses`}
-            onClick={() => handlePageChange("Courses")}
+            onClick={() => setCurrentPage("Courses")}
             className={
               currentPage === "Courses"
                 ? "nav-link active"
@@ -42,7 +42,7 @@ function NavTabs() {
         <li className="nav-item">
           <Link
             to={`/Courses/Tournaments`}
-            onClick={() => handlePageChange("Tournaments")}
+            onClick={() => setCurrentPage("Tournaments")}
             className={
               currentPage === "Tournaments"
                 ? "nav-link active"
@@ -55,7 +55,7 @@ function NavTabs() {
         <li className="nav-item">
           <Link
             to={`/Profile`}
-            onClick={() => handlePageChange("Profile")}
+            onClick={() => setCurrentPage("Profile")}
             className={
               currentPage === "Profile"
                 ? "nav-link active"
