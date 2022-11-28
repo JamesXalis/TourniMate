@@ -24,13 +24,6 @@ const tournamentSchema = new Schema(
     }
 );
 
-// Create a virtual property `upvoteCount` that gets the amount of comments per user
-tournamentSchema
-    .virtual('playerCount')
-    // Getter
-    .get(function () {
-        return this.meta.players;
-    });
 
 // Initialize our Post model
 const Tournament = model('tournament', tournamentSchema);

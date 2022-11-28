@@ -1,4 +1,5 @@
 const { Schema } = require('mongoose');
+const { Tournament } = require ('./Tournament');
 
 // Schema to create course model
 const courseSchema = new Schema({
@@ -17,7 +18,8 @@ const courseSchema = new Schema({
             type: String,
             required: true
         },
-        tournaments: [Tournament]
+        // tournaments: [Tournament]
     });
 
-module.exports = courseSchema;
+const Course = model ('Course', courseSchema);
+module.exports = Course;
