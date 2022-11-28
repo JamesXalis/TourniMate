@@ -3,7 +3,7 @@ const { Schema } = require('mongoose');
 // Schema to create tournament model
 const tournamentSchema = new Schema(
     {
-        tournameName: {
+        tournamentName: {
             type: String,
         },
         tournamentDate: {
@@ -15,6 +15,12 @@ const tournamentSchema = new Schema(
         tournamentImage: {
             type: String,
         },
+        course: {
+            type: Schema.Types.ObjectId
+        },
+        price: {
+            type: Number
+        }
     },
     {
         toJSON: {
