@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
+const { Tournament } = require('../Models');
 
 const tournamentSchema = require('./Tournament')
 
@@ -23,11 +24,11 @@ const userSchema = new Schema({
     },
     tournaments: [tournamentSchema],
 },
-{
-    toJSON: {
-        virtuals: true,
-      },
-}
+    {
+        toJSON: {
+            virtuals: true,
+        },
+    }
 );
 
 userSchema.pre('save', async function (next) {

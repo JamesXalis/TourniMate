@@ -1,4 +1,5 @@
 const { Schema } = require('mongoose');
+const { Tournament } = require ('./Tournament');
 
 const tournamentSchema = require('./Tournament')
 
@@ -22,4 +23,5 @@ const courseSchema = new Schema({
         tournaments: [tournamentSchema]
     });
 
-module.exports = courseSchema;
+const Course = model ('Course', courseSchema);
+module.exports = Course;
