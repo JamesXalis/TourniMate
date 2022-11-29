@@ -6,7 +6,7 @@ function Tournaments() {
       <main role="main">
         <section className="jumbotron text-center">
           <div className="container">
-            <h1 className="jumbotron-heading">Golf Tournaments</h1>
+            <h1 className="jumbotron-heading">Upcoming Tournaments</h1>
             <p className="lead text-muted">Here you can find the list of golf tournaments. Click on the image that you are interested in to learn more.</p>
           </div>
         </section>
