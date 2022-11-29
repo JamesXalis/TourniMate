@@ -37,7 +37,7 @@ export const REGISTER_TOURNAMENT = gql`
         }
     }
 `;
-export const LOGIN_USER = gql `
+export const LOGIN_USER = gql`
     mutation loginUser($email: String!, $password: String!) {
         loginUser(email: $email, password: $password) {
             token
