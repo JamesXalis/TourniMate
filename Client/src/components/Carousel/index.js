@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Signup from '../Signup';
+import Login from '../Login';
 import {
   Carousel,
   CarouselItem,
@@ -10,11 +11,13 @@ import {
 
 const items = [
   {
+    component: () => <Signup/>,
     id: 1,
     altText: 'Slide 1',
     caption: 'Slide 1',
   },
   {
+    component: () => <Login/>,
     id: 2,
     altText: 'Slide 2',
     caption: 'Slide 2',
@@ -53,7 +56,7 @@ function CarouselContainer(props) {
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
       >
-        <Signup/>
+        {item.component()}
         <CarouselCaption
           className="text-danger"
           captionText={item.caption}
