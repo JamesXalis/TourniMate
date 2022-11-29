@@ -18,11 +18,7 @@ const items = [
     altText: 'Slide 2',
     caption: 'Slide 2',
   },
-  {
-    id: 3,
-    altText: 'Slide 3',
-    caption: 'Slide 3',
-  },
+ 
 ];
 
 function CarouselContainer(props) {
@@ -65,7 +61,7 @@ function CarouselContainer(props) {
   });
 
   return (
-    <div>
+    <div className='w-100 ml-5'>
       <style>
         {`.custom-tag {
               max-width: 100%;
