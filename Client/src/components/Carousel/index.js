@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Signup from '../Signup'
+import Signup from '../Signup';
 import {
   Carousel,
   CarouselItem,
@@ -43,6 +43,7 @@ function CarouselContainer(props) {
     setActiveIndex(newIndex);
   };
 
+
   const slides = items.map((item) => {
     return (
       <CarouselItem
@@ -52,6 +53,7 @@ function CarouselContainer(props) {
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
       >
+        <Signup/>
         <CarouselCaption
           className="text-danger"
           captionText={item.caption}
