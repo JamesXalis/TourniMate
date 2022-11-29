@@ -41,19 +41,6 @@ function NavTabs() {
         </li>
         <li className="nav-item">
           <Link
-            to={`/Courses/Tournaments`}
-            onClick={() => setCurrentPage("Tournaments")}
-            className={
-              currentPage === "Tournaments"
-                ? "nav-link active"
-                : "nav-link NavColor"
-            }
-          >
-            Tournaments
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link
             to={`/Profile`}
             onClick={() => setCurrentPage("Profile")}
             className={

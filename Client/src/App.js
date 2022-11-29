@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Home from './components/Home';
 import Tournaments from './components/Tournaments';
 import Courses from './components/Courses';
@@ -8,11 +8,13 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+import NavTabs from './components/NavTabs';
 
 function App(){
  
 return(
   <Router>
+    <NavTabs/>
     <Routes>
       <Route path= '/' element={<Home />} />
       <Route path='/Courses' element={<Courses />} />
