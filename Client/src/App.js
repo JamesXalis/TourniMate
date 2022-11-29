@@ -9,18 +9,18 @@ import {
   Routes,
 } from "react-router-dom";
 
-function App(){
- 
-return(
-  <Router>
-    <Routes>
-      <Route path= '/' element={<Home />} />
-      <Route path='/Courses' element={<Courses />} />
-      <Route path='/Courses/Tournaments' element={<Tournaments />} />
-      <Route path='/profile' element={<Profile />} />
-    </Routes>
-  </Router>
-);    
+function App() {
+
+  return (
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/Courses' element={<Courses />} />
+        <Route path='/Courses/Tournaments' element={<Tournaments />} />
+        <Route path='/profile' element={<Profile />} />
+      </Routes>
+    </Router>
+  );
 }
 
 
