@@ -10,7 +10,8 @@ export const ADD_COURSE = gql`
             par
         }
     }
-`;
+`
+
 export const ADD_TOURNAMENT = gql`
     mutation addTournament($name: String!, $course: String!) {
         addTournament(name: $name, course: $course) {
@@ -22,4 +23,4 @@ export const ADD_TOURNAMENT = gql`
             course
         }
     }
-`;
+`
