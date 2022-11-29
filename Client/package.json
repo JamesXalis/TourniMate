@@ -12,11 +12,11 @@
         "graphql": "^16.6.0",
         "jwt-decode": "^2.2.0",
         "react": "^16.13.1",
-        "react-bootstrap": "^1.6.6",
+        "react-bootstrap": "^1.0.1",
         "react-dom": "^16.13.1",
         "react-router-dom": "^6.2.1",
         "react-scripts": "^5.0.1",
-        "react-strap": "^0.0.1"
+        "reactstrap": "^9.1.5"
     },
     "scripts": {
         "start": "react-scripts start",

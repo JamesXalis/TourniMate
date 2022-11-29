@@ -1,1 +1,16 @@
+*{
+    background-color: #eee2dc;
+    color: #ac3b61;
+}
+.gif{
+    background-color:  #edc7b7;
+    height: 46vh;
+    width: 46vh;
+}
+.carousel{
+    font-size: 24px;
+}
+.header{
+    font-size: 50px;
 
+}
