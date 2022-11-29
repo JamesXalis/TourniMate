@@ -61,7 +61,7 @@ function CarouselContainer(props) {
   });
 
   return (
-    <div className='w-100 ml-5'>
+    <div className='w-100 ml-5 rounded'>
       <style>
         {`.custom-tag {
               max-width: 100%;

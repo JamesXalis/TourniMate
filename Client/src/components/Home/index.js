@@ -7,13 +7,15 @@ function Home() {
     return (
         <div className='Home'>
             <h1 className=' header d-flex justify-content-center'>TourniMate</h1>
-        <div className='container d-flex justify-content-around'>
-            <div className='gif'>
+        <div className='container d-flex justify-content-between'>
+            <div className='gif rounded'>
             <img src='not_found.jpg'></img>
             </div>
         <Carousel/>
         </div>
+        <footer>About Us</footer>
         </div>
+        
     )
 }
 
