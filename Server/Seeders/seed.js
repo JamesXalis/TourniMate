@@ -13,6 +13,7 @@ db.once('open', async () => {
 
         await User.create(userSeeds);
         await Course.create(courseSeeds);
+        await Tournament.create(tournamentSeeds);
 
         for (let i = 0; i < tournamentSeeds.length; i++) {
             const { _id, tournamentName} = await tournament.create(tournamentSeeds[i]);

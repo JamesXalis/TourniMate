@@ -1,5 +1,7 @@
-# TourniMate
-A MERN full stack application to find tournaments to sign up for
+ <h1 align="center">TourniMate</h1>  
+<p align="center">
+    <img width="460" height="300" src="Client\src\images\TourniMate Logo.jpg">
+</p>
 
 ## Table of Contents  
 * [Description](##Description)  
