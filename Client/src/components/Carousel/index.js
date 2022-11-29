@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Signup from '../Signup'
 import {
   Carousel,
   CarouselItem,
