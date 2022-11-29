@@ -1,4 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
+import bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
+import './home.css';
+
+function Home() {
+
+=======
 import 'bootstrap/dist/css/bootstrap.min.css';
 import'./home.css';
 import Carousel from '../Carousel';
@@ -17,6 +24,7 @@ function Home() {
         </div>
         
     )
+>>>>>>> 93bf9f63890e92a4f8fda79fefaeb0fc9df440a0
 }
 
 export default Home;
