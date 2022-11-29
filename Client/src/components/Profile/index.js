@@ -1,7 +1,11 @@
+
+
+
+
 function Profile() {
     return (
         <div className='Home'>
-            <h1>TourniMate</h1>
+            <h1></h1>
         </div>
 
     )
