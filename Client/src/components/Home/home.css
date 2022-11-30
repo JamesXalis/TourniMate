@@ -14,7 +14,21 @@
     font-size: 50px;
 
 }
-.links-container{
-    border-top: solid 2px white;
-    width: 100%;
+.col-2{
+    font-size: 22px;
+    margin: auto;
+    padding-bottom: 15px;
+}
+a:hover{
+    color: white;
+    text-decoration: underline;
+}
+a{
+    color: #ac3b61;
+    text-decoration: none;
+}
+.creator{
+    font-size: 28px;
+    border-top: solid white 3px;
+    text-decoration: underline;
 }
