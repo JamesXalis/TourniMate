@@ -17,11 +17,7 @@ const courseSchema = new Schema({
             type: String,
             required: true,
         },
-        par: {
-            type: String,
-            required: true
-        },
-        tournaments: [tournamentSchema]
+        tournaments: [{type: Schema.Types.ObjectId, ref: "Tournament"}],    
     });
 
 const Course = model ('Course', courseSchema);

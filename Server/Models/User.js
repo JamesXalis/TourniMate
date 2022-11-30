@@ -22,7 +22,7 @@ const userSchema = new Schema({
         required: true,
         minlength: 8,
     },
-    tournaments: [tournamentSchema],
+    tournaments: [{type: Schema.Types.ObjectId, ref: "Tournament"}],
 },
     {
         toJSON: {

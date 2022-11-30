@@ -1,8 +1,8 @@
 const db = require('../Config/connection')
-const { User, Course, Tournament } = require('../models');
+const { User, Course, Tournament } = require('../Models');
 const courseSeeds = require('./courseSeeds.json');
-const tournamentSeeds = require('./courseSeeds.json');
-const userSeeds = require('./courseSeeds.json');
+const tournamentSeeds = require('./tournamentSeeds.json');
+const userSeeds = require('./userSeeds.json');
 
 
 db.once('open', async () => {
@@ -12,16 +12,16 @@ db.once('open', async () => {
         await User.deleteMany({});
 
         await User.create(userSeeds);
-        await Course.create(courseSeeds);
         await Tournament.create(tournamentSeeds);
+        await Course.create(courseSeeds);
 
         for (let i = 0; i < tournamentSeeds.length; i++) {
-            const { _id, tournamentName} = await tournament.create(tournamentSeeds[i]);
-            const course = await Course.findOneAndUpdate(
-                { name: tournamentName},
+            const { _id, course} = await Tournament.create(tournamentSeeds[i]);
+            await Course.findOneAndUpdate(
+                { courseName: course},
                 {
                     $addToSet: {
-                        course: tournaments,
+                        tournaments: _id,
                     },
                 }
             );
@@ -34,3 +34,4 @@ db.once('open', async () => {
     console.log('all done!');
     process.exit(0);
 });
+

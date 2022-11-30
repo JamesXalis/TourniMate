@@ -10,15 +10,11 @@ const resolvers = {
             }
         throw new AuthenticationError('You must be logged in')
         },
-        courses: async (parent, args, context) => {
-            if (context.user) {
-                return Course.find()
-            }
+        courses: async (parent, args) => {
+                return Course.find().populate("tournaments")
         },
-        tournaments: async (parent, args, context) => {
-            if (context.user) {
+        tournaments: async (parent, args) => {
                 return Tournament.find()
-            }
         }
     },
 
