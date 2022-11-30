@@ -13,7 +13,7 @@
 
 ## Description
 
-Welcome to TourniMate! This application 
+Welcome to TourniMate! The application that allows the user 
 
 ### Technologies
 
