@@ -1,11 +1,11 @@
 [
-    {
-        "tournamentName": "Desert Open",
-        "tournamentDate": "3/15/2023",
-        "tournamentDescription": "Annual Desert Open, Tee times start at 7:00am, Check in with starter for your tee time!",
-        "tournamentImage": "https://imgur.com/6glweyB",
-        "tournamentPrice": "49.99"
-    },
+    // {
+    //     "tournamentName": "Desert Open",
+    //     "tournamentDate": "3/15/2023",
+    //     "tournamentDescription": "Annual Desert Open, Tee times start at 7:00am, Check in with starter for your tee time!",
+    //     "tournamentImage": "https://imgur.com/6glweyB",
+    //     "tournamentPrice": "49.99"
+    // },
     {
         "tournamentName": "Cave Creek Scramble",
         "tournamentDate": "6/13/2023",
@@ -27,4 +27,110 @@
         "tournamentImage": "https://imgur.com/UOA69Th",
         "tournamentPrice": "115.00"
     },
+    {
+        "tournamentName": "BudLight Open",
+        "tournamentDate": "2/13/2023",
+        "tournamentDescription": "Grab your buds and sink some putts!",
+        "tournamentImage": "https://imgur.com/HBABY9g",
+        "tournamentPrice": "215.00"
+    },
+    {
+        "tournamentName": "Miller Scramble",
+        "tournamentDate": "5/06/2023",
+        "tournamentDescription": "Grab breakfast balls and get ready for miller time!",
+        "tournamentImage": "https://imgur.com/57x4hGZ",
+        "tournamentPrice": "115.00"
+    },
+    {
+        "tournamentName": "Sun Tan Shotgun",
+        "tournamentDate": "7/01/2023",
+        "tournamentDescription": "Local beer will keep your ball in bounds",
+        "tournamentImage": "https://imgur.com/UYgoLdm",
+        "tournamentPrice": "95.00"
+    },
+    {
+        "tournamentName": "Phoenix Closed",
+        "tournamentDate": "2/15/2023",
+        "tournamentDescription": "Same as the Waste Management Phoenix Open but not!",
+        "tournamentImage": "https://imgur.com/ulx0S2j",
+        "tournamentPrice": "375.00"
+    },
+    {
+        "tournamentName": "Ryder Bowl",
+        "tournamentDate": "4/20/2023",
+        "tournamentDescription": "Don't worry about being selected for this tournament, we promise you will have a spot",
+        "tournamentImage": "https://imgur.com/KUGUjir",
+        "tournamentPrice": "350.00"
+    },
+    {
+        "tournamentName": "Desert Classic",
+        "tournamentDate": "7/24/2023",
+        "tournamentDescription": "Hottest tournament of the year, get in soon before its too late!",
+        "tournamentImage": "https://imgur.com/4zYSN85",
+        "tournamentPrice": "275.00"
+    },
+    {
+        "tournamentName": "Easy Open",
+        "tournamentDate": "3/19/2023",
+        "tournamentDescription": "Virtual Golf for the day then take your winnings to the casino and give it back",
+        "tournamentImage": "https://imgur.com/bzbecr5",
+        "tournamentPrice": "145.00"
+    },
+    {
+        "tournamentName": "Trashed Tour",
+        "tournamentDate": "5/9/2023",
+        "tournamentDescription": "Must drink for every shot made",
+        "tournamentImage": "https://imgur.com/twrmqDV",
+        "tournamentPrice": "50.00"
+    },
+    {
+        "tournamentName": "Night Prowl",
+        "tournamentDate": "6/10/2023",
+        "tournamentDescription": "Night Event for those that aren't scared of the dark",
+        "tournamentImage": "https://imgur.com/47Jwob7",
+        "tournamentPrice": "115.00"
+    },
+    {
+        "tournamentName": "Mulligan Classic",
+        "tournamentDate": "9/18/2023",
+        "tournamentDescription": "Grab some extra balls for this tournament you will need them",
+        "tournamentImage": "https://imgur.com/gbUyNU3",
+        "tournamentPrice": "125.00"
+    },
+    {
+        "tournamentName": "Fairway to Heaven",
+        "tournamentDate": "10/22/2023",
+        "tournamentDescription": "Lets hope the golf gods are in your favor for this one!",
+        "tournamentImage": "https://imgur.com/w1j2FBw",
+        "tournamentPrice": "105.00"
+    },
+    {
+        "tournamentName": "Fore the Love of Golf",
+        "tournamentDate": "11/7/2023",
+        "tournamentDescription": "Do you have a love hate relationship with golf, get rid of the love and go straight to the hate here!",
+        "tournamentImage": "https://imgur.com/uq6KK1N",
+        "tournamentPrice": "175.00"
+    },
+    {
+        "tournamentName": "Le Tour De Valley",
+        "tournamentDate": "3/15/2023",
+        "tournamentDescription": "Come join the most proper tournament of the year, top hats and spectacles required",
+        "tournamentImage": "https://imgur.com/KZVCfko",
+        "tournamentPrice": "110.00"
+    },
+    {
+        "tournamentName": "Always Sunny Cup",
+        "tournamentDate": "5/12/2023",
+        "tournamentDescription": "It might rain, who knows!",
+        "tournamentImage": "https://imgur.com/undefined",
+        "tournamentPrice": "135.00"
+    },
+    {
+        "tournamentName": "CaddyShack Fest",
+        "tournamentDate": "8/03/2023",
+        "tournamentDescription": "Timeless Classic event that brings joy to everyone born before 2000.",
+        "tournamentImage": "https://imgur.com/3pZlAde",
+        "tournamentPrice": "180.00"
+    }
+
 ]
