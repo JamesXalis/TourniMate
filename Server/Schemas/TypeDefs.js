@@ -11,7 +11,7 @@ const typeDefs = gql`
     _id: ID
     username: String
     email: String
-    tournamets: [Tournament]
+    tournaments: [Tournament]
   }
 
   type Course {
@@ -40,7 +40,7 @@ const typeDefs = gql`
   type Mutation {
         loginUser(email: String!, password: String!): Auth
         addUser(username: String, email: String, password: String): Auth
-        registerTournament(_id: ID, tournametName: String, tournamentDescription: String, tournamentImage: String): User
+        registerTournament(_id: ID, tournamentName: String, tournamentDescription: String, tournamentImage: String): User
     }
 `;
 

@@ -11,7 +11,7 @@ export const QUERY_ME = gql `
                 tournamentDate
                 tournamentDescription
                 tournamentImage
-                course
+                courseName
                 tournamentPrice
             }
         }
@@ -44,7 +44,7 @@ export const QUERY_TOURNAMENTS = gql `
             tournamentDate
             tournamentDescription
             tournamentImage
-            course
+            courseName
             tournamentPrice
         }
     }
