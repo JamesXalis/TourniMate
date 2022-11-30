@@ -28,6 +28,7 @@ const typeDefs = gql`
     tournamentDescription: String
     tournamentImage: String
     tournamentDate: String
+    tournamentPrice: String
     courseName: String
   }
 

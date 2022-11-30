@@ -30,7 +30,6 @@ export const QUERY_COURSES = gql `
                 tournamentDate
                 tournamentDescription
                 tournamentImage
-                course
                 tournamentPrice
             }
         }

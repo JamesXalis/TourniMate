@@ -18,7 +18,7 @@ const tournamentSchema = new Schema(
         course: {
             type: String
         },
-        price: {
+        tournamentPrice: {
             type: Number
         }
     },
