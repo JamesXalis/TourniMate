@@ -5,7 +5,7 @@
 .gif{
     background-color:  #edc7b7;
     height: 46vh;
-    width: 46vh;
+    width: 100%;
 }
 .carousel{
     font-size: 24px;
@@ -13,4 +13,25 @@
 .header{
     font-size: 50px;
 
+}
+
+
+
+.col-2{
+    font-size: 22px;
+    margin: auto;
+    padding-bottom: 15px;
+}
+a:hover{
+    color: white;
+    text-decoration: underline;
+}
+a{
+    color: #ac3b61;
+    text-decoration: none;
+}
+.creator{
+    font-size: 28px;
+    border-top: solid white 3px;
+    text-decoration: underline;
 }
