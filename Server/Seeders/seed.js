@@ -1,8 +1,8 @@
 const db = require('../Config/connection')
-const { User, Course, Tournament } = require('../models');
+const { User, Course, Tournament } = require('../Models');
 const courseSeeds = require('./courseSeeds.json');
-const tournamentSeeds = require('./courseSeeds.json');
-const userSeeds = require('./courseSeeds.json');
+const tournamentSeeds = require('./tournamentSeeds.json');
+const userSeeds = require('./userSeeds.json');
 
 
 db.once('open', async () => {
