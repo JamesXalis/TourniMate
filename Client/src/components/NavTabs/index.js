@@ -13,13 +13,13 @@ function NavTabs() {
     setCurrentPage(location.pathname)
   }, [location.pathname]);
   return (
-    <div className="headerNav-container ">
-      <ul className="nav nav-tabs ">
+    <div className="headerNav-container">
+      <ul className="nav ">
         <li className="nav-item">
           <Link
             to={`/`}
             onClick={() => setCurrentPage("Home")}
-            className={
+            className={ 
               currentPage === "/" ? "nav-link active" : "nav-link NavColor"
             }
           >
