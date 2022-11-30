@@ -2,15 +2,14 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import'./home.css';
 import CarouselContainer from '../Carousel';
+import logo from '../../images/logo.jpg'
 
 function Home() {
     return (
         <div className='Home'>
             <h1 className=' header d-flex justify-content-center'>TourniMate</h1>
-        <div className='row'>
-            <div className='gif rounded col-4'>
-            <img src='not_found.jpg'></img>
-            </div>
+        <div className='d-flex justify-content-around'>
+            <img src={logo}></img>
         <CarouselContainer/>
         </div>
         <div className="fixed-bottom">

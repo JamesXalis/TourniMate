@@ -66,23 +66,20 @@ function CarouselContainer(props) {
     <div className='rounded'>
       <style>
         {`.custom-tag {
-              max-width: 100%;
-              height: 500px;
+              padding: 100px;
+              border: 2px solid black;
             }`}
       </style>
       <Carousel activeIndex={activeIndex} next={next} previous={previous}>
-        <CarouselIndicators
-          items={items}
-          activeIndex={activeIndex}
-          onClickHandler={goToIndex}
-        />
         {slides}
         <CarouselControl
+          className='m-3'
           direction="prev"
           directionText="Previous"
           onClickHandler={previous}
         />
         <CarouselControl
+          className='m-2'
           direction="next"
           directionText="Next"
           onClickHandler={next}
