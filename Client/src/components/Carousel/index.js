@@ -11,16 +11,16 @@ import {
 
 const items = [
   {
-    component: () => <Signup/>,
+    component: () => <Login/>,
     id: 1,
-    altText: 'Slide 1',
-    caption: 'Slide 1',
+    altText: 'Login',
+    caption: 'Login',
   },
   {
-    component: () => <Login/>,
+    component: () => <Signup/>,
     id: 2,
-    altText: 'Slide 2',
-    caption: 'Slide 2',
+    altText: 'Signup',
+    caption: 'Signup',
   },
  
 ];
@@ -57,22 +57,17 @@ function CarouselContainer(props) {
         onExited={() => setAnimating(false)}
       >
         {item.component()}
-        <CarouselCaption
-          className="text-danger"
-          captionText={item.caption}
-          captionHeader={item.caption}
-        />
+        
       </CarouselItem>
     );
   });
 
   return (
-    <div className='w-100 ml-5'>
+    <div className='rounded'>
       <style>
         {`.custom-tag {
               max-width: 100%;
               height: 500px;
-              background: #edc7b7;
             }`}
       </style>
       <Carousel activeIndex={activeIndex} next={next} previous={previous}>
