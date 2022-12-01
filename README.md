@@ -1,6 +1,6 @@
 <h1 align="center">TourniMate</h1>  
 <p align="center">
-    <img width="460" height="300" src="Client\src\images\TourniMate Logo.jpg">
+    <img width="460" height="300" src="Client\src\images\logo.jpg">
 </p>
 
 
@@ -14,27 +14,24 @@
 * The webpage allows the user to select a golf course, access all tournaments associated with the course, then register for those tournaments and make payment to confirm the users spot in the tournament.
 * What we learned throughout the project:
     * **Andrew Eysoldt**
-        * 
-        * 
+        * I learned how to doc dive better and more efficiently to solve problems i encountered.
+        * I learned how to better communicate with others and work together to solve problems we had.
     * **Brandon Maggiano**
-        * 
-        * 
+        * I learned how to solidify the data that's passed between typedefs, models, resolvers, queries and mutations and how important it is to have all of that data be identical and spot on.
+        * I learned more of the ins and outs of React and how powerful of a tool that can be for webdevs.
     * **James Xalis**
-        * 
+        * I learned collaborative projects contain the possibility of code bugs and If not detected and resolved early, these bugs can destroy an entire project.
         * 
     * **Brittany Blalock**
-        * 
-        * 
+        * I learned that stand-ups help the team request and provide support & prioritize responsibilities
     * **Dustin Moore**
-        * 
-        * 
+        * I learned how to utilize stripe within a react application
+        * I learned how to associate seeds with models.
         
 
 ## [TourniMate Deployed Heroku Application](https://)
 
 ## [TourniMate GitHut Repository](https://github.com/JamesXalis/TourniMate)
-
-----
 
 ## Table of Contents
 
@@ -77,18 +74,6 @@
 * Click on a Tournament and taken to make payment.
 * Click on Profile navigation to be taken to profile with all tournaments that the user has been registered for.
 * Click on the Logout button to be taken back to the homepage.  
-
-----
-
-## Desktop Demo
-<img src= ""></img>
-
-----
-
-## Mobile Demo
-<p align="center">
-<img src= ""></img>
-</p>
 
 ----
 

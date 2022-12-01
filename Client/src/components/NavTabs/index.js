@@ -19,7 +19,7 @@ function NavTabs() {
           <Link
             to={`/`}
             onClick={() => setCurrentPage("Home")}
-            className={ 
+            className={
               currentPage === "/" ? "nav-link active" : "nav-link NavColor"
             }
           >
@@ -52,8 +52,21 @@ function NavTabs() {
             Profile
           </Link>
         </li>
-        
-      </ul>
+        {AuthService.loggedIn() ? (
+          <li className="nav-item">
+            <Link
+              to={`/`}
+              onClick={AuthService.logout}
+              className={
+                currentPage === "Profile"
+                  ? "nav-link active"
+                  : "nav-link NavColor"
+              }
+            >Logout</Link></li> ) :
+            ( <li></li>
+          )}
+
+          </ul>
     </div>
   );
 }
