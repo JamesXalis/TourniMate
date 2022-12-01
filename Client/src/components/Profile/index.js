@@ -29,7 +29,7 @@ const Profile = () => {
           variables: { _id: tournamentToRemove}
         })
         console.log(tournamentToRemove)
-        // window.location.reload();
+        window.location.reload();
 
       } catch (err) {
         console.error(err)
@@ -58,7 +58,7 @@ const Profile = () => {
                   <Card.Title className="title">{tournament.tournamentName}</Card.Title>
                   <Card.Text>{tournament.tournamentDescription}</Card.Text>
                   <Card.Text>Date: {tournament.tournamentDate}</Card.Text>
-                  <Button className=" btn-danger text-center" onClick={() => handleRemoveTournament(tournament._id)}>Remove this tournament</Button>
+                  <Button className="btn-block btn-danger text-center" onClick={() => handleRemoveTournament(tournament._id)}>Remove this tournament</Button>
                 </Card.Body>
               </Card>
             );

@@ -59,7 +59,7 @@ console.log(tournamentToSave)
                   <Card.Text>{tournament.tournamentDate}</Card.Text>
                     <a className="btn-block btn-danger text-center" href={tournament.link} target="_blank">
                     Click here to pay</a>{console.log(tournament)}
-                  <Button className=" btn-danger text-center" onClick={() => handleRegisterTournament(tournament._id)}>Save this tournament</Button>
+                  <Button className="btn-danger text-center" onClick={() => handleRegisterTournament(tournament._id)}>Save this tournament</Button>
                 </Card.Body>
               </Card>
             );
