@@ -1,51 +1,62 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import {
+  Jumbotron,
+  Container,
+  CardColumns,
+  Card,
+  Button,
+} from "react-bootstrap";
+import { Link } from "react-router-dom";
+import "./courses.css";
+import { useQuery } from "@apollo/client";
+import { QUERY_COURSES } from "../../utils/queries";
 
-function Courses() {
+const Courses = () => {
+  const { loading, data } = useQuery(QUERY_COURSES);
+
+  // if data isn't here yet, say so
+  if (loading) {
+    return <h2>LOADING...</h2>;
+  }
+
+  const courseData = data.courses || [];
+
   return (
-    <>
-      <main role="main">
-        <section className="jumbotron text-center">
-          <div className="container">
-            <h1 className="jumbotron-heading">Courses</h1>
-            <p className="lead text-muted">Here you can find the list of golf Courses. Click on the image that you are interested in to learn more.</p>
-          </div>
-        </section>
+    <div className="Courses">
+      <Jumbotron fluid className="text-light" id="background">
+        <Container>
+          <h1 className="d-flex justify-content-center">Courses!</h1>
+        </Container>
+      </Jumbotron> 
+      <Container className="mx-auto my-auto">
+        <CardColumns className="card-columns my-auto h-100">
+          {courseData.map((course) => {
+            return (
+              <Card key={course._id} className="Card h-100">
+                {course.courseImage ? (
+                  <Card.Img
+                    src={course.courseImage}
+                    alt={`${course.courseName}`}
+                    variant="top"
+                  />
+                ) : null}
+                <Card.Body>
+                  <Card.Title className="title">{course.courseName}</Card.Title>
+                  <Card.Text>{course.courseDescription}</Card.Text>
+                  <Link
+                    className="btn-block btn-danger text-center"
+                    to={`/Courses/${course._id}`}
+                  >
+                    View Tournaments
+                  </Link>
+                </Card.Body>
+              </Card>
+            );
+          })}
+        </CardColumns>
+      </Container>
+    </div>
+  );
+};
 
-        <div className="album py-5 bg-light">
-          <div className="container">
-
-            <div className="card-group">
-              <div className="card">
-                <img src="#" className="card-img-top" alt="..." />
-                <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-              </div>
-              <div className="card">
-                <img src="#" className="card-img-top" alt="..." />
-                <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                  <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-              </div>
-              <div className="card">
-                <img src="#" className="card-img-top" alt="..." />
-                <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                  <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-
-    </>
-  )
-}
-
-export default Courses
+export default Courses;

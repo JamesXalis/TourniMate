@@ -1,0 +1,17 @@
+.text-light{
+    background-color: #164a41;
+}
+.Tournaments{
+    background-image: linear-gradient(to bottom right, #164a41, #4d774e);
+    height: 100vh;
+    text-align: center;
+}
+.Card{
+    background-color: #164a41;
+    border: solid #f1b24a 2px;
+    height: auto;
+}
+#background{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

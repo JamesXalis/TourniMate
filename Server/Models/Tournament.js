@@ -1,4 +1,4 @@
-const { Schema } = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 // Schema to create tournament model
 const tournamentSchema = new Schema(
@@ -16,9 +16,9 @@ const tournamentSchema = new Schema(
             type: String,
         },
         course: {
-            type: Schema.Types.ObjectId
+            type: String
         },
-        price: {
+        tournamentPrice: {
             type: Number
         }
     },
@@ -39,6 +39,6 @@ const tournamentSchema = new Schema(
 //     });
 
 // Initialize our Post model
-// const Tournament = model('tournament', tournamentSchema);
+const Tournament = model('Tournament', tournamentSchema);
 
-module.exports = tournamentSchema;
+module.exports = Tournament;

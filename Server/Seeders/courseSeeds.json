@@ -2,49 +2,31 @@
     {
         "courseName": "Rancho Manana Golf Course",
         "courseDescription": "Oasis vibes tucked back in the heart of Cave Creek, short course with views",
-        "courseImage": "https://imgur.com/edATDV4",
-        "tournaments": ["Cave Creek Scramble", "Santa Clause Invitational", "New Years Best Ball"] 
+        "courseImage": "https://i.imgur.com/edATDV4.jpeg"
     },
     {
         "courseName": "StarFire Golf Course",
         "courseDescription": "Scottsdale's top confidence builder, shoot low and enjoy a break from desert golf with shade on every hole!",
-        "courseImage": "https://imgur.com/RQEaFSg",
-        "tournaments": ["BudLight Open", "Miller Scramble", "Sun Tan Shotgun"] 
+        "courseImage": "https://imgur.com/RQEaFSg.jpeg"
     },
     {
         "courseName": "TPC Scottsdale Stadium Course",
         "courseDescription": "Play golf where the pro's play, fast greens, luscious fairways. Be careful, you might not make it out alive!",
-        "courseImage": "https://imgur.com/pl0m47U",
-        "tournaments": ["Phoenix Closed", "Ryder Bowl", "Desert Classic"] 
+        "courseImage": "https://imgur.com/pl0m47U.jpeg"
     },
     {
         "courseName": "Top Golf Scottsdale",
         "courseDescription": "No golf carts, no range finders, no waiting. Play in your own booth and enjoy the facility",
-        "courseImage": "https://imgur.com/z3AkUTU",
-        "tournaments": ["Easy Open", "Trashed Tour", "Night Prowl"] 
+        "courseImage": "https://imgur.com/z3AkUTU.jpeg"
     },
     {
         "courseName": "Mountain Shadows Golf Course",
         "courseDescription": "Tucked in at the base of Camelback mountain, enjoy this short par three course. Perfect for after work tournaments and enjoying time with friends",
-        "courseImage": "https://imgur.com/yyNpTtM",
-        "tournaments": ["Mulligan Classic", "Fairway to Heaven", "Fore the Love of Golf"] 
+        "courseImage": "https://imgur.com/yyNpTtM.jpeg"
     },
-    // {
-    //     "courseName": "Mcdowell Mountain Golf Club",
-    //     "courseDescription": "Scenic views of the valley, located in North Scottsdale. Enjoy this little piece of luxury, you should be able to find your balls on this desert course.",
-    //     "courseImage": "https://imgur.com/FM9voQu",
-    //     "tournaments": ["Double Bogey Open", "The Charity Champs", "Make your Mark", "The Wankers"] 
-    // },
-    // {
-    //     "courseName": "Quintero Golf Course",
-    //     "courseDescription": "Drive to the middle of no where and play golf at this course surrounded by a failed residence project. You better win at this beautiful course of have a tough ride home!",
-    //     "courseImage": "https://imgur.com/H83qOPt",
-    //     "tournaments": ["The Sandbagger Classic", "Putt it There", "The Hacky Sack", "The Duffers Challenge"] 
-    // },
     {
-        "courseName": "Cornado Golf Course",
+        "courseName": "Coronado Golf Course",
         "courseDescription": "Come play golf with our local college kids, drink beer and forget your playing on a golf course",
-        "courseImage": "https://imgur.com/byktHd0",
-        "tournaments": ["Le Tour De Valley", "Always Sunny Cup", "CaddyShack Fest"] 
+        "courseImage": "https://imgur.com/byktHd0.jpeg"
     }
 ]

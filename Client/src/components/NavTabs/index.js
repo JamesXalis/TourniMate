@@ -2,24 +2,24 @@ import React from "react";
 import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./navTabs.css";
-import {useLocation} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-
+import AuthService from '../../utils/auth'
 function NavTabs() {
-    const [currentPage, setCurrentPage] = useState();
-    let location = useLocation();
- 
-   useEffect (() => {
-     setCurrentPage(location.pathname) 
-   }, [location.pathname]);
+  const [currentPage, setCurrentPage] = useState();
+  let location = useLocation();
+
+  useEffect(() => {
+    setCurrentPage(location.pathname)
+  }, [location.pathname]);
   return (
-    <div className="headerNav-container ">
-      <ul className="nav nav-tabs ">
+    <div className="headerNav-container">
+      <ul className="nav ">
         <li className="nav-item">
           <Link
-            to ={`/`}
+            to={`/`}
             onClick={() => setCurrentPage("Home")}
-            className={
+            className={ 
               currentPage === "/" ? "nav-link active" : "nav-link NavColor"
             }
           >
@@ -52,6 +52,7 @@ function NavTabs() {
             Profile
           </Link>
         </li>
+        
       </ul>
     </div>
   );

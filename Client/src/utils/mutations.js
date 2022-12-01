@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
 export const ADD_USER = gql`
-    mutation addUser($username: String!, $email: String!, $password: String!) {
+    mutation addUser($username: String, $email: String, $password: String) {
         addUser(username: $username, email: $email, password: $password) {
             token
             user {
@@ -13,16 +13,16 @@ export const ADD_USER = gql`
                     tournamentName
                     tournamentDescription
                     tournamentDate
-                    course
-                    price
+                    courseName
+                    tournamentPrice
                 }
         }
     }
 }`;
 
 export const REGISTER_TOURNAMENT = gql`
-    mutation registerTournament($tournamentName: String!, $tournamentDate: String!, $tournamentDescription: String!, $tournamentImage: string, $course: Schema.Types.ObjectId, $price: Number) {
-        registerTournament(tournamentName: $tournamentName, tournamentDate: $tournamentDate, tournamentDescription: $tournamentDescription, tournamentImage: $tournamentImage, course: $course, price: $price){
+    mutation registerTournament($tournamentName: String, $tournamentDate: String, $tournamentDescription: String, $tournamentImage: String, $course: ID, $tournamentPrice: Number) {
+        registerTournament(tournamentName: $tournamentName, tournamentDate: $tournamentDate, tournamentDescription: $tournamentDescription, tournamentImage: $tournamentImage, course: $course, tournamentPrice: $tournamentPrice){
             _id
             username
             email
@@ -31,8 +31,8 @@ export const REGISTER_TOURNAMENT = gql`
                     tournamentName
                     tournamentDescription
                     tournamentDate
-                    course
-                    price
+                    courseName
+                    tournamentPrice
                 }
         }
     }
@@ -50,8 +50,8 @@ export const LOGIN_USER = gql`
                     tournamentName
                     tournamentDescription
                     tournamentDate
-                    course
-                    price
+                    courseName
+                    tournamentPrice
                 }
             }
         }

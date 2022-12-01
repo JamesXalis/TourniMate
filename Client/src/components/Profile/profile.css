@@ -1,0 +1,12 @@
+.text-light{
+    background-color: #164a41;
+}
+.Background{
+    background-image: linear-gradient(to bottom right, #164a41, #4d774e);
+    height: 100vh;
+    text-align: center;
+}
+#background{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

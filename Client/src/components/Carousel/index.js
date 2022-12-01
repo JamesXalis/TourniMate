@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Signup from '../Signup'
+import Signup from '../Signup';
+import Login from '../Login';
 import {
   Carousel,
   CarouselItem,
@@ -10,14 +11,16 @@ import {
 
 const items = [
   {
+    component: () => <Login/>,
     id: 1,
-    altText: 'Slide 1',
-    caption: 'Slide 1',
+    altText: 'Login',
+    caption: 'Login',
   },
   {
+    component: () => <Signup/>,
     id: 2,
-    altText: 'Slide 2',
-    caption: 'Slide 2',
+    altText: 'Signup',
+    caption: 'Signup',
   },
  
 ];
@@ -43,6 +46,7 @@ function CarouselContainer(props) {
     setActiveIndex(newIndex);
   };
 
+
   const slides = items.map((item) => {
     return (
       <CarouselItem
@@ -52,37 +56,31 @@ function CarouselContainer(props) {
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
       >
-        <CarouselCaption
-          className="text-danger"
-          captionText={item.caption}
-          captionHeader={item.caption}
-        />
+        {item.component()}
+        
       </CarouselItem>
     );
   });
 
   return (
-    <div className='w-100 ml-5'>
+    <div>
       <style>
         {`.custom-tag {
-              max-width: 100%;
-              height: 500px;
-              background: #edc7b7;
-            }`}
+              padding: 100px;
+              color: white;
+            }`
+          }
       </style>
       <Carousel activeIndex={activeIndex} next={next} previous={previous}>
-        <CarouselIndicators
-          items={items}
-          activeIndex={activeIndex}
-          onClickHandler={goToIndex}
-        />
         {slides}
         <CarouselControl
+          className='m-3'
           direction="prev"
           directionText="Previous"
           onClickHandler={previous}
         />
         <CarouselControl
+          className='m-2'
           direction="next"
           directionText="Next"
           onClickHandler={next}
