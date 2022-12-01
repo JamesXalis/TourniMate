@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
-
-import { useQuery } from '@apollo/client'
-import { QUERY_ME } from '../../utils/queries'
+import './profile.css';
+import { useQuery } from '@apollo/client';
+import { QUERY_ME } from '../../utils/queries';
 // import Auth from '../../utils/auth';
 
 const Profile = () => {
@@ -16,14 +16,14 @@ const Profile = () => {
     const userData = data?.me || [];
 
   return (
-    <>
-      <Jumbotron fluid className='text-light bg-dark'>
+    <div className='Background'>
+      <Jumbotron fluid className='text-light' id='background'>
         <Container>
-          <h1>Viewing saved books!</h1>
+          <h1 className='d-flex justify-content-center'>Viewing saved books!</h1>
         </Container>
       </Jumbotron>
       <Container>
-        <h2>
+        <h2 className='Header d-flex justify-content-center'>
           {tourneyData.length
             ? `Viewing ${tourneyData.length} saved ${tourneyData.length === 1 ? 'tournament' : 'tournaments'}:`
             : 'You have no upcoming tournaments!'}
@@ -43,7 +43,7 @@ const Profile = () => {
           })}
         </CardColumns>
       </Container>
-    </>
+    </div>
   );
 };
 

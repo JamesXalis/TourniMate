@@ -1,0 +1,24 @@
+
+.Courses{
+    background-image: linear-gradient(to bottom right, #164a41, #4d774e);
+    height: 100vh;
+    text-align: center;
+}
+.Card{
+    background-color: #164a41;
+    border: solid #f1b24a 2px;
+    font-size: 20px;
+}
+.card-img-top{
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+}
+#background{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #164a41;
+}
+.title{
+    font-size: 24px;
+}
