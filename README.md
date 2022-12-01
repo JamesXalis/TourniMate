@@ -51,4 +51,7 @@ Run 'npm install' to install all required dependancies
 
 No license
 
+## Authors
+
+Dustin Moore, Brandon Maggiano, Brittany Blalock, Andrew Eysoldt, James Xalis
 ---

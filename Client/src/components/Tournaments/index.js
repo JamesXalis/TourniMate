@@ -38,7 +38,7 @@ const { Tournaments } = useParams()
                   <Card.Text>{tournament.tournamentDescription}</Card.Text>
                   <Card.Text>${tournament.tournamentPrice}.00 USD/Player</Card.Text>
                   <Card.Text>{tournament.tournamentDate}</Card.Text>
-                  <Link className='btn-block btn-danger text-center'>
+                  <Link className='btn-block btn-danger text-center' src={tournament.link}>
                     Click here to pay
                   </Link>
                 </Card.Body>
