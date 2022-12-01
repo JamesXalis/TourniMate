@@ -29,10 +29,10 @@ const Courses = () => {
         </Container>
       </Jumbotron> 
       <Container className="mx-auto my-auto">
-        <CardColumns className="card-columns my-auto h-100">
+        <CardColumns className="card-columns my-auto">
           {courseData.map((course) => {
             return (
-              <Card key={course._id} className="Card h-100">
+              <Card key={course._id} className="Card">
                 {course.courseImage ? (
                   <Card.Img
                     src={course.courseImage}
