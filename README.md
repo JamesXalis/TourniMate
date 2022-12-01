@@ -53,4 +53,5 @@ No license
 
 ## Authors
 
+Dustin Moore, Brandon Maggiano, Brittany Blalock, Andrew Eysoldt, James Xalis
 ---
