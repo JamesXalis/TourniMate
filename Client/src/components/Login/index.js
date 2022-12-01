@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { useMutation } from '@apollo/client'
 
@@ -45,6 +46,12 @@ const LoginForm = () => {
     });
   };
 
+  const navigate = useNavigate();
+
+  const navigateCourses = () => {
+    navigate('../Courses')
+  };
+
   return (
     <>
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
@@ -79,6 +86,7 @@ const LoginForm = () => {
         <Button
           disabled={!(userFormData.email && userFormData.password)}
           type='submit'
+          onClick={navigateCourses}
           variant='success'>
           Submit
         </Button>
