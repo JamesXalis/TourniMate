@@ -25,7 +25,6 @@
     * **Brittany Blalock**
         * 
         * 
-        * 
     * **Dustin Moore**
         * 
         * 
