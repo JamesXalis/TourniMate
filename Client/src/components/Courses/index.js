@@ -32,7 +32,7 @@ const Courses = () => {
         <CardColumns className="card-columns my-auto h-100">
           {courseData.map((course) => {
             return (
-              <Card key={course._id} className="Card h-100">
+              <Card key={course._id} className="Card">
                 {course.courseImage ? (
                   <Card.Img
                     src={course.courseImage}

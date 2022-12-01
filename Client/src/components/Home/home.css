@@ -4,7 +4,8 @@
 }
 .Home {
   background-image: linear-gradient(to bottom right, #164a41, #4d774e);
-  height: 100vh;
+  height: 100em;
+  width: 100vw;
 }
 .header {
   font-size: 50px;
@@ -52,4 +53,8 @@ a {
 
 a:hover {
   color: #f1b24a;
+}
+.Con{
+  width: 100%;
+  margin: auto;
 }

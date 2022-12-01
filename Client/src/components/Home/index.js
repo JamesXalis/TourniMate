@@ -3,15 +3,25 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./home.css";
 import CarouselContainer from "../Carousel";
 import logo from "../../images/logo.jpg";
+import LoginForm from "../Login";
+import Signup from "../Signup";
 
 function Home() {
   return (
     <div className="Home">
       <h1 className=" header d-flex justify-content-center">TourniMate</h1>
-      <div className="container">
-      <div className="row justify-content-around">
-        <img className="col-4" src={logo}></img>
-        <div className="col-4"><CarouselContainer/></div>
+
+      <div className="Con d-flex justify-content-center row">
+      <img className="d-flex mx-5" src={logo}></img>
+      <div className="d-flex flex-column w-25 col-md-6 col-xs-12">
+        <div className="my-3 ">
+        <h3 className="d-flex">Login</h3>
+        <LoginForm/>
+        </div>
+        <div className="my-3"> 
+        <h3 className="d-flex">Signup</h3>
+        <Signup/>
+        </div>
       </div>
       </div>
       
