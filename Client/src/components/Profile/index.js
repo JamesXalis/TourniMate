@@ -15,7 +15,8 @@ const Profile = () => {
       return <h2>LOADING...</h2>;
     }
     const userData = data?.me.tournaments || [];
-    
+    const meData = data?.me
+
     const handleRemoveTournament = async (tournamentToRemove) => {
       const token = Auth.loggedIn() ? Auth.getToken() : null;
 
@@ -39,13 +40,13 @@ const Profile = () => {
     <div className='Tournaments'>
       <Jumbotron fluid className='text-light' id='background'>
         <Container>
-          <h1 className='d-flex justify-content-center'>Viewing your saved tournaments!</h1>
+          <h1 className='d-flex justify-content-center'>Hey {meData.username}, here's your saved tournaments!</h1>
         </Container>
       </Jumbotron>
       <Container>
         <h2 className='d-flex justify-content-center'>
           {userData.length
-            ? `Viewing ${userData.length} saved ${userData.length === 1 ? 'tournament' : 'tournaments'}:`
+            ? `You currently have ${userData.length} upcoming ${userData.length === 1 ? 'tournament' : 'tournaments'}:`
             : 'You have no upcoming tournaments!'}
         </h2>
         <CardColumns className='card-columns my-auto'>
