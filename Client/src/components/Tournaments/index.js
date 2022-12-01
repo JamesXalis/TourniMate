@@ -55,11 +55,11 @@ console.log(tournamentToSave)
                 <Card.Body>
                   <Card.Title className='title'>{tournament.tournamentName}</Card.Title>
                   <Card.Text>{tournament.tournamentDescription}</Card.Text>
-                  <Card.Text>${tournament.tournamentPrice}.00 USD/Player</Card.Text>
+                  <Card.Text>${tournament.tournamentPrice} USD/Player</Card.Text>
+                  <Button className="btn-danger text-center" onClick={() => handleRegisterTournament(tournament._id)}>Save this tournament</Button>
                   <Card.Text>{tournament.tournamentDate}</Card.Text>
                     <a className="btn-block btn-danger text-center" href={tournament.link} target="_blank">
-                    Click here to pay</a>{console.log(tournament)}
-                  <Button className="btn-danger text-center" onClick={() => handleRegisterTournament(tournament._id)}>Save this tournament</Button>
+                    Click here to register!</a>{console.log(tournament)}
                 </Card.Body>
               </Card>
             );
