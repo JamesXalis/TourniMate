@@ -25,6 +25,7 @@ Welcome to TourniMate! The application that allows the user
 * JSX
 * Node.js
 * MongoDB
+* Apollo
 
 
 ### Future Development
