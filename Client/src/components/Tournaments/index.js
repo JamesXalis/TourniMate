@@ -28,8 +28,8 @@ const { Tournaments } = useParams()
           <h1 className='d-flex justify-content-center'>Here are the tournaments available!</h1>
         </Container>
       </Jumbotron>
-      <Container>
-        <CardColumns>
+      <Container className="mx-auto my-auto">
+        <CardColumns className="card-columns my-auto h-100">
           {courseData.map((tournament) => {
             return (
               <Card key={tournament._id} className='Card'>
