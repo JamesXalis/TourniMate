@@ -1,36 +1,56 @@
 *{
-    background-color: #eee2dc;
-    color: #ac3b61;
+    color: whitesmoke;
 }
-.gif{
-    height: 46vh;
-    width: 100%;
-}
-.carousel{
-    font-size: 24px;
+.Home{
+    background-image: linear-gradient(to bottom right, #164a41, #4d774e);
+    height: 100vh;
 }
 .header{
     font-size: 50px;
-
+    background-color: #164a41;
+    margin: auto;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 20px;
+    text-align: center
 }
-
-
-
 .col-2{
     font-size: 22px;
     margin: auto;
     padding-bottom: 15px;
+    border: solid transparent;
 }
-a:hover{
-    color: white;
-    text-decoration: underline;
+.col-2:hover{
+    border-right: solid #f1b24a 2px;
+    border-top: solid #f1b24a 2px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color:#f1b24a;
 }
 a{
-    color: #ac3b61;
+    color: whitesmoke;
     text-decoration: none;
 }
 .creator{
     font-size: 28px;
-    border-top: solid white 3px;
-    text-decoration: underline;
+    font-weight: 500;
+    background-color: #164a41;
+    color: #f1b24a;
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+}
+.item{
+    align-items: center;
+}
+.footer{
+    background-color:#164a41;
+}
+a:hover{
+border-right: solid #f1b24a 2px;
+    border-top: solid #f1b24a 2px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color:#f1b24a;
 }

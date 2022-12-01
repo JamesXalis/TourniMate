@@ -1,0 +1,10 @@
+.nav{
+    background-color: #164a41;
+    color: whitesmoke;
+}
+.nav-item{
+    background-color: #164a41;
+    font-size: 24px;
+    border-right: solid white 2px;
+    border-radius: 5px;
+}

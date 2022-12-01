@@ -63,12 +63,13 @@ function CarouselContainer(props) {
   });
 
   return (
-    <div className='rounded'>
+    <div>
       <style>
         {`.custom-tag {
               padding: 100px;
-              border: 2px solid black;
-            }`}
+              color: white;
+            }`
+          }
       </style>
       <Carousel activeIndex={activeIndex} next={next} previous={previous}>
         {slides}
