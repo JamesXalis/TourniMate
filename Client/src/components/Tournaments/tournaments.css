@@ -11,7 +11,8 @@
     background-color: #164a41;
     border: solid #f1b24a 2px;
     height: 100%;
-    min-height: 30em;
+    min-height: 33em;
+    font-size: 20px;
 }
 #background{
     padding-top: 20px;

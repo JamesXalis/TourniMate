@@ -22,7 +22,6 @@ const { Tournaments } = useParams()
  
   return (
     <div className='Tournaments'>
-
 <Jumbotron fluid className='text-light ' id='background'>
         <Container>
           <h1 className='d-flex justify-content-center'>Here are the tournaments available!</h1>
@@ -32,8 +31,8 @@ const { Tournaments } = useParams()
         <CardColumns className="card-columns my-auto h-100">
           {courseData.map((tournament) => {
             return (
-              <Card key={tournament._id} className='Card'>
-                {tournament.tournamentImage ? <Card.Img src={tournament.tournamentImage} alt={`${tournament.tournamentName}`} variant='top' /> : null}
+              <Card key={tournament._id} className='Card h-100'>
+                {tournament.tournamentImage ? <Card.Img className='img-fluid'src={tournament.tournamentImage} alt={`${tournament.tournamentName}`} variant='top' /> : null}
                 <Card.Body>
                   <Card.Title className='title'>{tournament.tournamentName}</Card.Title>
                   <Card.Text>{tournament.tournamentDescription}</Card.Text>
