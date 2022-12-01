@@ -12,8 +12,8 @@ function Home() {
       <h1 className=" header d-flex justify-content-center">TourniMate</h1>
 
       <div className="Con d-flex justify-content-center row">
-      <img className="d-flex mx-5" src={logo}></img>
-      <div className="d-flex flex-column w-25 col-md-6 col-xs-12">
+      <img className=" img-fluid d-flex mx-5" src={logo}></img>
+      <div className="d-flex flex-column w-fluid col-md-6 col-xs-12 mx-2">
         <div className="my-3 ">
         <h3 className="d-flex">Login</h3>
         <LoginForm/>
