@@ -12,14 +12,14 @@ const Profile = () => {
   if (loading) {
       return <h2>LOADING...</h2>;
     }
-    const tourneyData = data?.me.tournaments || {};
     const userData = data?.me || [];
+    const tourneyData = data?.me.tournaments || {};
 
   return (
     <div className='Background'>
       <Jumbotron fluid className='text-light' id='background'>
         <Container>
-          <h1 className='d-flex justify-content-center'>Viewing saved books!</h1>
+          <h1 className='d-flex justify-content-center'>Viewing your saved tournaments!</h1>
         </Container>
       </Jumbotron>
       <Container>
@@ -36,7 +36,6 @@ const Profile = () => {
                 <Card.Body>
                   <Card.Title>{user.tournamentName}</Card.Title>
                   <Card.Text>{user.tournamentDescription}</Card.Text>
-
                 </Card.Body>
               </Card>
             );

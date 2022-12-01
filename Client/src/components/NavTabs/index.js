@@ -58,14 +58,13 @@ function NavTabs() {
               to={`/`}
               onClick={AuthService.logout}
               className={
-                currentPage === "Profile"
+                currentPage === "/"
                   ? "nav-link active"
                   : "nav-link NavColor"
               }
             >Logout</Link></li> ) :
             ( <li></li>
           )}
-
           </ul>
     </div>
   );
