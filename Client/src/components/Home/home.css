@@ -1,56 +1,55 @@
-*{
-    color: whitesmoke;
+* {
+  color: whitesmoke;
+  font-family: 'Dosis', sans-serif;
 }
-.Home{
-    background-image: linear-gradient(to bottom right, #164a41, #4d774e);
-    height: 100vh;
+.Home {
+  background-image: linear-gradient(to bottom right, #164a41, #4d774e);
+  height: 100vh;
 }
-.header{
-    font-size: 50px;
-    background-color: #164a41;
-    margin: auto;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    margin-bottom: 20px;
-    text-align: center
+.header {
+  font-size: 50px;
+  background-color: #164a41;
+  margin: auto;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  margin-bottom: 20px;
+  text-align: center;
 }
-.col-2{
-    font-size: 22px;
-    margin: auto;
-    padding-bottom: 15px;
-    border: solid transparent;
+.col-2 {
+  font-size: 22px;
+  margin: auto;
+  padding-bottom: 15px;
+  border: solid transparent;
 }
-.col-2:hover{
-    border-right: solid #f1b24a 2px;
-    border-top: solid #f1b24a 2px;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    color:#f1b24a;
+.col-2:hover {
+  border-right: solid #f1b24a 2px;
+  border-top: solid #f1b24a 2px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  color: #f1b24a;
 }
-a{
-    color: whitesmoke;
-    text-decoration: none;
+a {
+  color: whitesmoke;
+  text-decoration: none;
 }
-.creator{
-    font-size: 28px;
-    font-weight: 500;
-    background-color: #164a41;
-    color: #f1b24a;
-    border-top-right-radius: 10%;
-    border-top-left-radius: 10%;
+.creator {
+  font-size: 28px;
+  font-weight: 500;
+  background-color: #164a41;
+  color: #f1b24a;
+  border-top-right-radius: 10%;
+  border-top-left-radius: 10%;
+  border-top: solid 3px #f1b24a;
 }
-.item{
-    align-items: center;
+.item {
+  align-items: center;
 }
-.footer{
-    background-color:#164a41;
+.footer {
+  background-color: #164a41;
 }
-a:hover{
-border-right: solid #f1b24a 2px;
-    border-top: solid #f1b24a 2px;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    color:#f1b24a;
+
+a:hover {
+  color: #f1b24a;
 }

@@ -1,43 +1,52 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom'
-
-import { useQuery } from '@apollo/client'
-import { QUERY_COURSES } from '../../utils/queries'
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import {
+  Jumbotron,
+  Container,
+  CardColumns,
+  Card,
+  Button,
+} from "react-bootstrap";
+import { Link } from "react-router-dom";
+import "./courses.css";
+import { useQuery } from "@apollo/client";
+import { QUERY_COURSES } from "../../utils/queries";
 
 const Courses = () => {
+  const { loading, data } = useQuery(QUERY_COURSES);
 
-  const { loading, data } = useQuery(QUERY_COURSES)
-  
   // if data isn't here yet, say so
   if (loading) {
     return <h2>LOADING...</h2>;
   }
-  
+
   const courseData = data.courses || [];
 
   return (
-    <>
-
-<Jumbotron fluid className='text-light bg-dark'>
+    <div className="Courses">
+      <Jumbotron fluid className="text-light" id="background">
         <Container>
-          <h1>Here are the courses available!</h1>
+          <h1 className="d-flex justify-content-center">Courses!</h1>
         </Container>
-      </Jumbotron>
-      <Container>
-        <h2>
-            Courses:
-        </h2>
-        <CardColumns>
+      </Jumbotron> 
+      <Container className="mx-auto my-auto">
+        <CardColumns className="card-columns my-auto h-100">
           {courseData.map((course) => {
             return (
-              <Card key={course._id} border='dark'>
-                {course.courseImage ? <Card.Img src={course.courseImage} alt={`${course.courseName}`} variant='top' /> : null}
+              <Card key={course._id} className="Card h-100">
+                {course.courseImage ? (
+                  <Card.Img
+                    src={course.courseImage}
+                    alt={`${course.courseName}`}
+                    variant="top"
+                  />
+                ) : null}
                 <Card.Body>
-                  <Card.Title>{course.courseName}</Card.Title>
+                  <Card.Title className="title">{course.courseName}</Card.Title>
                   <Card.Text>{course.courseDescription}</Card.Text>
-                  <Link className='btn-block btn-danger text-center' to={`/Courses/${course._id}`}>
+                  <Link
+                    className="btn-block btn-danger text-center"
+                    to={`/Courses/${course._id}`}
+                  >
                     View Tournaments
                   </Link>
                 </Card.Body>
@@ -46,8 +55,8 @@ const Courses = () => {
           })}
         </CardColumns>
       </Container>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default Courses
+export default Courses;

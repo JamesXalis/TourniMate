@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./navTabs.css";
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-
+import AuthService from '../../utils/auth'
 function NavTabs() {
   const [currentPage, setCurrentPage] = useState();
   let location = useLocation();
@@ -52,6 +52,7 @@ function NavTabs() {
             Profile
           </Link>
         </li>
+        
       </ul>
     </div>
   );
