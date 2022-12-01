@@ -33,6 +33,7 @@ const LoginForm = () => {
       });
 
       Auth.login(data.loginUser.token);
+      navigateCourses();
 
     } catch (err) {
       console.error(err);
@@ -49,7 +50,9 @@ const LoginForm = () => {
   const navigate = useNavigate();
 
   const navigateCourses = () => {
-    navigate('../Courses')
+    if(Auth.loggedIn) {
+      navigate('../Courses')
+    }
   };
 
   return (
@@ -86,7 +89,6 @@ const LoginForm = () => {
         <Button
           disabled={!(userFormData.email && userFormData.password)}
           type='submit'
-          onClick={navigateCourses}
           variant='success'>
           Submit
         </Button>
