@@ -39,6 +39,7 @@ function NavTabs() {
             Courses
           </Link>
         </li>
+        {AuthService.loggedIn() ? (
         <li className="nav-item">
           <Link
             to={`/Profile`}
@@ -51,7 +52,8 @@ function NavTabs() {
           >
             Profile
           </Link>
-        </li>
+        </li> ) : (<li></li>
+        )}
         {AuthService.loggedIn() ? (
           <li className="nav-item">
             <Link

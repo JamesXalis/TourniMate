@@ -3,7 +3,7 @@ import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap
 import './profile.css';
 import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../../utils/queries';
-// import Auth from '../../utils/auth';
+import Auth from '../../utils/auth';
 
 const Profile = () => {
   const { loading, data } = useQuery(QUERY_ME)
@@ -12,8 +12,7 @@ const Profile = () => {
   if (loading) {
       return <h2>LOADING...</h2>;
     }
-    const userData = data?.me || [];
-    const tourneyData = data?.me.tournaments || {};
+    const userData = data?.me.tournaments || [];
 
   return (
     <div className='Background'>
@@ -24,8 +23,8 @@ const Profile = () => {
       </Jumbotron>
       <Container>
         <h2 className='Header d-flex justify-content-center'>
-          {tourneyData.length
-            ? `Viewing ${tourneyData.length} saved ${tourneyData.length === 1 ? 'tournament' : 'tournaments'}:`
+          {userData.length
+            ? `Viewing ${userData.length} saved ${userData.length === 1 ? 'tournament' : 'tournaments'}:`
             : 'You have no upcoming tournaments!'}
         </h2>
         <CardColumns>
