@@ -39,6 +39,7 @@ function NavTabs() {
             Courses
           </Link>
         </li>
+        {AuthService.loggedIn() ? (
         <li className="nav-item">
           <Link
             to={`/Profile`}
@@ -51,21 +52,21 @@ function NavTabs() {
           >
             Profile
           </Link>
-        </li>
+        </li> ) : (<li></li>
+        )}
         {AuthService.loggedIn() ? (
           <li className="nav-item">
             <Link
               to={`/`}
               onClick={AuthService.logout}
               className={
-                currentPage === "Profile"
+                currentPage === "/"
                   ? "nav-link active"
                   : "nav-link NavColor"
               }
             >Logout</Link></li> ) :
             ( <li></li>
           )}
-
           </ul>
     </div>
   );

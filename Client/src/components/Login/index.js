@@ -33,7 +33,6 @@ const LoginForm = () => {
       });
 
       Auth.login(data.loginUser.token);
-      navigateCourses();
 
     } catch (err) {
       console.error(err);
@@ -47,13 +46,15 @@ const LoginForm = () => {
     });
   };
 
-  const navigate = useNavigate();
 
-  const navigateCourses = () => {
-    if(Auth.loggedIn) {
-      navigate('../Courses')
-    }
-  };
+  // run navigate courses when component mounts
+  // const navigate = useNavigate();
+
+  // const navigateCourses = () => {
+  //   if(Auth.loggedIn) {
+  //     navigate('/Courses')
+  //   }
+  // };
 
   return (
     <>
