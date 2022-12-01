@@ -3,7 +3,7 @@
 }
 .Tournaments{
     background-image: linear-gradient(to bottom right, #164a41, #4d774e);
-    height: 100vh;
+    height: 100%;
     text-align: center;
 }
 .Card{
