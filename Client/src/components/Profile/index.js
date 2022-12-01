@@ -58,6 +58,7 @@ const Profile = () => {
                   <Card.Title className="title">{tournament.tournamentName}</Card.Title>
                   <Card.Text>{tournament.tournamentDescription}</Card.Text>
                   <Card.Text>Date: {tournament.tournamentDate}</Card.Text>
+                  <Card.Text>Good Luck!</Card.Text>
                   <Button className="btn-block btn-danger text-center" onClick={() => handleRemoveTournament(tournament._id)}>Remove this tournament</Button>
                 </Card.Body>
               </Card>
