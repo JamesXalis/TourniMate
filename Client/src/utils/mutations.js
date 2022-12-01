@@ -13,16 +13,17 @@ export const ADD_USER = gql`
                     tournamentName
                     tournamentDescription
                     tournamentDate
-                    courseName
+                    course
                     tournamentPrice
+                    link
                 }
         }
     }
 }`;
 
 export const REGISTER_TOURNAMENT = gql`
-    mutation registerTournament($tournamentName: String, $tournamentDate: String, $tournamentDescription: String, $tournamentImage: String, $course: ID, $tournamentPrice: Number) {
-        registerTournament(tournamentName: $tournamentName, tournamentDate: $tournamentDate, tournamentDescription: $tournamentDescription, tournamentImage: $tournamentImage, course: $course, tournamentPrice: $tournamentPrice){
+    mutation registerTournament($_id: ID) {
+        registerTournament(_id: $_id){
             _id
             username
             email
@@ -31,8 +32,9 @@ export const REGISTER_TOURNAMENT = gql`
                     tournamentName
                     tournamentDescription
                     tournamentDate
-                    courseName
+                    course
                     tournamentPrice
+                    link
                 }
         }
     }
@@ -50,8 +52,9 @@ export const LOGIN_USER = gql`
                     tournamentName
                     tournamentDescription
                     tournamentDate
-                    courseName
+                    course
                     tournamentPrice
+                    link
                 }
             }
         }
