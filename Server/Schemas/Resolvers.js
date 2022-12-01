@@ -51,6 +51,17 @@ const resolvers = {
             }
             throw new AuthenticationError('You need to be logged in to register for a tournamet')
         },
+        removeTournament: async ( parent, args, context ) => {
+            if (context.user) {
+                const updatedUser = await User.findOneAndUpdate(
+                    { _id: context.user._id},
+                    { $pull: { tournaments: args._id }},
+                    { new: true }
+                )
+                return updatedUser;
+            }
+            throw new AuthenticationError('You must be logged in.')
+        }
     }
 }
 

@@ -39,6 +39,24 @@ export const REGISTER_TOURNAMENT = gql`
         }
     }
 `;
+export const REMOVE_TOURNAMENT = gql`
+    mutation removeTournament($_id: ID) {
+        removeTournament(_id: $_id){
+            _id
+            username
+            email
+            tournaments {
+                    _id
+                    tournamentName
+                    tournamentDescription
+                    tournamentDate
+                    course
+                    tournamentPrice
+                    link
+                }
+        }
+    }
+`;
 export const LOGIN_USER = gql`
     mutation loginUser($email: String!, $password: String!) {
         loginUser(email: $email, password: $password) {

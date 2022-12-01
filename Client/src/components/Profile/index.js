@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
 import './profile.css';
-import { useQuery } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_ME } from '../../utils/queries';
+import { REMOVE_TOURNAMENT } from '../../utils/mutations';
+import Auth from '../../utils/auth';
 
 const Profile = () => {
   const { loading, data } = useQuery(QUERY_ME)
+  const [ removeTournament, { error }] = useMutation(REMOVE_TOURNAMENT)
   
   // if data isn't here yet, say so
   if (loading) {
@@ -13,6 +16,24 @@ const Profile = () => {
     }
     const userData = data?.me.tournaments || [];
     
+    const handleRemoveTournament = async (tournamentToRemove) => {
+      const token = Auth.loggedIn() ? Auth.getToken() : null;
+
+      if (!token) {
+        return false;
+      }
+
+      try {
+        const { data } = await removeTournament({
+          variables: { _id: tournamentToRemove}
+        })
+        console.log(tournamentToRemove)
+        // window.location.reload();
+
+      } catch (err) {
+        console.error(err)
+      }
+    }
 
   return (
     <div className='Tournaments'>
@@ -28,14 +49,15 @@ const Profile = () => {
             : 'You have no upcoming tournaments!'}
         </h2>
         <CardColumns className='card-columns my-auto'>
-          {userData.map((user) => {
+          {userData.map((tournament) => {
             return (
-              <Card key={user._id} className="Card">
-                {user.tournamentImage ? <Card.Img className='img-fluid' src={user.tournamentImage} alt={`The cover for ${user.tournamentName}`} variant='top' /> : null}
+              <Card key={tournament._id} className="Card">
+                {tournament.tournamentImage ? <Card.Img className='img-fluid' src={tournament.tournamentImage} alt={`The cover for ${tournament.tournamentName}`} variant='top' /> : null}
                 <Card.Body>
-                  <Card.Title className="title">{user.tournamentName}</Card.Title>
-                  <Card.Text>{user.tournamentDescription}</Card.Text>
-                  <Card.Text>Date: {user.tournamentDate}</Card.Text>
+                  <Card.Title className="title">{tournament.tournamentName}</Card.Title>
+                  <Card.Text>{tournament.tournamentDescription}</Card.Text>
+                  <Card.Text>Date: {tournament.tournamentDate}</Card.Text>
+                  <Button className=" btn-danger text-center" onClick={() => handleRemoveTournament(tournament._id)}>Remove this tournament</Button>
                 </Card.Body>
               </Card>
             );
