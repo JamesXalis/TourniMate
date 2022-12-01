@@ -28,10 +28,10 @@ const { Tournaments } = useParams()
         </Container>
       </Jumbotron>
       <Container className="mx-auto my-auto">
-        <CardColumns className="card-columns my-auto h-100">
+        <CardColumns className="card-columns my-auto ">
           {courseData.map((tournament) => {
             return (
-              <Card key={tournament._id} className='Card h-100'>
+              <Card key={tournament._id} className='Card '>
                 {tournament.tournamentImage ? <Card.Img className='img-fluid'src={tournament.tournamentImage} alt={`${tournament.tournamentName}`} variant='top' /> : null}
                 <Card.Body>
                   <Card.Title className='title'>{tournament.tournamentName}</Card.Title>
