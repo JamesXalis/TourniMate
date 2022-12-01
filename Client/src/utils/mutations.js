@@ -13,7 +13,7 @@ export const ADD_USER = gql`
                     tournamentName
                     tournamentDescription
                     tournamentDate
-                    course
+                    courseName
                     tournamentPrice
                 }
         }
@@ -31,14 +31,14 @@ export const REGISTER_TOURNAMENT = gql`
                     tournamentName
                     tournamentDescription
                     tournamentDate
-                    course
+                    courseName
                     tournamentPrice
                 }
         }
     }
 `;
 export const LOGIN_USER = gql`
-    mutation loginUser($email: String, $password: String) {
+    mutation loginUser($email: String!, $password: String!) {
         loginUser(email: $email, password: $password) {
             token
             user {
@@ -50,7 +50,7 @@ export const LOGIN_USER = gql`
                     tournamentName
                     tournamentDescription
                     tournamentDate
-                    course
+                    courseName
                     tournamentPrice
                 }
             }

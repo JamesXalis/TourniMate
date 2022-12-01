@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { useMutation } from '@apollo/client'
 
@@ -32,6 +33,7 @@ const LoginForm = () => {
       });
 
       Auth.login(data.loginUser.token);
+      navigateCourses();
 
     } catch (err) {
       console.error(err);
@@ -43,6 +45,14 @@ const LoginForm = () => {
       email: '',
       password: '',
     });
+  };
+
+  const navigate = useNavigate();
+
+  const navigateCourses = () => {
+    if(Auth.loggedIn) {
+      navigate('../Courses')
+    }
   };
 
   return (
