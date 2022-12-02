@@ -38,7 +38,7 @@ const Profile = () => {
 
   return (
     <div className='Tournaments'>
-      <Jumbotron fluid className='text-light' id='background'>
+      <Jumbotron fluid className='text-light'>
         <Container>
           <h1 className='d-flex justify-content-center'>Hey {meData.username}, here's your saved tournaments!</h1>
         </Container>
