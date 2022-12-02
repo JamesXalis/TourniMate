@@ -56,10 +56,19 @@ console.log(tournamentToSave)
                   <Card.Title className='title'>{tournament.tournamentName}</Card.Title>
                   <Card.Text>{tournament.tournamentDescription}</Card.Text>
                   <Card.Text>${tournament.tournamentPrice} USD/Player</Card.Text>
-                  <Button className="btn-danger text-center" onClick={() => handleRegisterTournament(tournament._id)}>Save this tournament</Button>
+                  {Auth.loggedIn() ? (
+                    <Button className="btn-danger text-center" onClick={() => handleRegisterTournament(tournament._id)}>Save this tournament</Button>
+                  ) : (
+                    <Button className="btn-danger text-center">Login/Signup to save tournament</Button>
+                  )}
                   <Card.Text>{tournament.tournamentDate}</Card.Text>
+                  {Auth.loggedIn() ? (
                     <a className="btn-block btn-danger text-center" href={tournament.link} target="_blank">
                     Click here to register!</a>
+                  ) : (
+                    <a className="btn-block btn-danger text-center">
+                    Login/Signup to pay for this tournament</a>
+                  )}
                 </Card.Body>
               </Card>
             );
