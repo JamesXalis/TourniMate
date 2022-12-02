@@ -2,7 +2,7 @@
     "name": "tournimate",
     "version": "1.0.0",
     "description": "A MERN full stack application to find tournaments to sign up for",
-    "main": "index.js",
+    "main": "Server/server.js",
     "scripts": {
         "start": "node Server/server.js",
         "seed": "node Server/Seeders/seed.js",
