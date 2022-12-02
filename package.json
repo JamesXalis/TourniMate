@@ -1,35 +1,35 @@
 {
-    "name": "tournimate",
-    "version": "1.0.0",
-    "description": "A MERN full stack application to find tournaments to sign up for",
-    "main": "Server/server.js",
-    "scripts": {
-        "start": "node Server/server.js",
-        "seed": "node Server/Seeders/seed.js",
-        "develop": "concurrently \"cd Server && npm run watch\" \"cd Client && npm start\"",
-        "install": "cd Server && npm i && cd ../Client && npm i",
-        "build": "cd Client && npm run build",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/JamesXalis/TourniMate.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/JamesXalis/TourniMate/issues"
-    },
-    "homepage": "https://github.com/JamesXalis/TourniMate#readme",
-    "devDependencies": {
-        "concurrently": "^5.1.0",
-        "express": "4.17.1",
-        "graphql": "^16.6.0",
-        "mongoose": "6.0.13"
-    },
-    "dependencies": {
-        "@stripe/react-stripe-js": "^1.15.0",
-        "@stripe/stripe-js": "^1.44.1"
-    }
+  "name": "tournimate",
+  "version": "1.0.0",
+  "description": "A MERN full stack application to find tournaments to sign up for",
+  "main": "Server/server.js",
+  "scripts": {
+    "start": "node Server/server.js",
+    "seed": "node Server/Seeders/seed.js",
+    "develop": "concurrently \"cd Server && npm run watch\" \"cd Client && npm start\"",
+    "install": "cd Server && npm i && cd ../Client && npm i",
+    "build": "cd Client && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesXalis/TourniMate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamesXalis/TourniMate/issues"
+  },
+  "homepage": "https://github.com/JamesXalis/TourniMate#readme",
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "express": "4.17.1",
+    "graphql": "^16.6.0",
+    "mongoose": "6.0.13"
+  },
+  "dependencies": {
+    "@stripe/react-stripe-js": "^1.15.0",
+    "@stripe/stripe-js": "^1.44.1"
+  }
 }
