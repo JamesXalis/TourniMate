@@ -4,7 +4,7 @@
     "description": "A MERN full stack application to find tournaments to sign up for",
     "main": "index.js",
     "scripts": {
-        "start": "node Server/server.js",
+        "start": "node Server/index.js",
         "seed": "node Server/Seeders/seed.js",
         "develop": "concurrently \"cd Server && npm run watch\" \"cd Client && npm start\"",
         "install": "cd Server && npm i && cd ../Client && npm i",
