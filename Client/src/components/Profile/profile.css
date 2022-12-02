@@ -3,8 +3,9 @@
 }
 .Background{
     background-image: linear-gradient(to bottom right, #164a41, #4d774e);
-    height: 100vh;
+    height: 100em;
     text-align: center;
+    min-height: 100%;
 }
 #background{
     padding-top: 20px;
