@@ -1,15 +1,18 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Jumbotron, Container, CardColumns, Card } from 'react-bootstrap';
+import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import './tournaments.css';
-import { useQuery } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
 import { QUERY_COURSES } from '../../utils/queries';
+import { REGISTER_TOURNAMENT } from '../../utils/mutations';
+import Auth from '../../utils/auth'
 
 
 
 const Tournaments = () => {
 const { Tournaments } = useParams()
   const { loading, data } = useQuery(QUERY_COURSES);
+  const [ registerTournament, { error } ] = useMutation(REGISTER_TOURNAMENT)
   
   // if data isn't here yet, say so
   if (loading) {
@@ -18,8 +21,24 @@ const { Tournaments } = useParams()
   } 
  
     const courseData = data.courses.find((tourney) => tourney._id === Tournaments).tournaments || [];
-    console.log(courseData)
  
+    const handleRegisterTournament = async(tournamentToSave) => {
+      const token = Auth.loggedIn() ? Auth.getToken() : null;
+
+      if (!token) {
+        return false;
+      }
+console.log(tournamentToSave)
+      try {
+        const response = await registerTournament({
+          variables: {_id: tournamentToSave},
+        })
+        window.location.reload();
+      } catch (err) {
+        console.error(err)
+      }
+    };
+
   return (
     <div className='Tournaments'>
 <Jumbotron fluid className='text-light ' id='background'>
@@ -36,11 +55,11 @@ const { Tournaments } = useParams()
                 <Card.Body>
                   <Card.Title className='title'>{tournament.tournamentName}</Card.Title>
                   <Card.Text>{tournament.tournamentDescription}</Card.Text>
-                  <Card.Text>${tournament.tournamentPrice}.00 USD/Player</Card.Text>
+                  <Card.Text>${tournament.tournamentPrice} USD/Player</Card.Text>
+                  <Button className="btn-danger text-center" onClick={() => handleRegisterTournament(tournament._id)}>Save this tournament</Button>
                   <Card.Text>{tournament.tournamentDate}</Card.Text>
-                  <Link className='btn-block btn-danger text-center' src={tournament.link}>
-                    Click here to pay
-                  </Link>
+                    <a className="btn-block btn-danger text-center" href={tournament.link} target="_blank">
+                    Click here to register!</a>{console.log(tournament)}
                 </Card.Body>
               </Card>
             );

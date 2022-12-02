@@ -7,12 +7,14 @@ export const QUERY_ME = gql `
             username
             email
             tournaments {
+                _id
                 tournamentName
                 tournamentDate
                 tournamentDescription
                 tournamentImage
-                courseName
+                course
                 tournamentPrice
+                link
             }
         }
     }
@@ -26,11 +28,14 @@ export const QUERY_COURSES = gql `
             courseImage
             courseDescription
             tournaments {
+                _id
                 tournamentName
                 tournamentDate
                 tournamentDescription
                 tournamentImage
                 tournamentPrice
+                course
+                link
             }
         }
     }
@@ -44,8 +49,9 @@ export const QUERY_TOURNAMENTS = gql `
             tournamentDate
             tournamentDescription
             tournamentImage
-            courseName
+            course
             tournamentPrice
+            link
         }
     }
 `

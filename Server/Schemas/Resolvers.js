@@ -6,7 +6,7 @@ const resolvers = {
     Query: {
         me: async (parent, args, context) => {
             if (context.user) {
-                return User.findOne({ _id: context.user._id })
+                return User.findOne({ _id: context.user._id }).populate('tournaments')
             }
         throw new AuthenticationError('You must be logged in')
         },
@@ -44,13 +44,24 @@ const resolvers = {
             if (context.user) {
                 const updatedUser = await User.findOneAndUpdate(
                     { _id: context.user._id},
-                    { $addToSet: { tournaments: args }},
+                    { $addToSet: { tournaments: args._id }},
                     { new: true, runValidators: true },
                 )
                 return updatedUser
             }
             throw new AuthenticationError('You need to be logged in to register for a tournamet')
         },
+        removeTournament: async ( parent, args, context ) => {
+            if (context.user) {
+                const updatedUser = await User.findOneAndUpdate(
+                    { _id: context.user._id},
+                    { $pull: { tournaments: args._id }},
+                    { new: true }
+                )
+                return updatedUser;
+            }
+            throw new AuthenticationError('You must be logged in.')
+        }
     }
 }
 
