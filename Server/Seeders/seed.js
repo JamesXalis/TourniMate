@@ -1,5 +1,5 @@
 const db = require('../Config/connection')
-const { User, Course, Tournament } = require('../Models');
+const { User, Course, Tournament } = require('../Models/Index');
 const courseSeeds = require('./courseSeeds.json');
 const tournamentSeeds = require('./tournamentSeeds.json');
 const userSeeds = require('./userSeeds.json');
