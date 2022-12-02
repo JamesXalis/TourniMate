@@ -1,7 +1,7 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
-import './tournaments.css';
+import "./tournaments.css"
 import { useMutation, useQuery } from '@apollo/client';
 import { QUERY_COURSES } from '../../utils/queries';
 import { REGISTER_TOURNAMENT } from '../../utils/mutations';
@@ -41,7 +41,7 @@ console.log(tournamentToSave)
 
   return (
     <div className='Tournaments'>
-<Jumbotron fluid className='text-light ' id='background'>
+<Jumbotron fluid className='text-light '>
         <Container>
           <h1 className='d-flex justify-content-center'>Here are the tournaments available!</h1>
         </Container>
@@ -59,14 +59,14 @@ console.log(tournamentToSave)
                   <Button className="btn-danger text-center" onClick={() => handleRegisterTournament(tournament._id)}>Save this tournament</Button>
                   <Card.Text>{tournament.tournamentDate}</Card.Text>
                     <a className="btn-block btn-danger text-center" href={tournament.link} target="_blank">
-                    Click here to register!</a>{console.log(tournament)}
+                    Click here to register!</a>
                 </Card.Body>
               </Card>
             );
           })}
         </CardColumns>
       </Container>
-    </div>
+     </div>
   )
 }
 

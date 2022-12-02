@@ -3,8 +3,8 @@
 }
 .Tournaments {
   background-image: linear-gradient(to bottom right, #164a41, #4d774e);
-  height: 100%;
   min-height: 100%;
+  height: 100%;
   text-align: center;
 }
 .Card {
@@ -14,16 +14,9 @@
   min-height: 33em;
   font-size: 20px;
 }
-#background {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
 .card-img-top {
   width: 100%;
   height: 25vh;
   object-fit: cover;
 }
-.mx-auto {
-  height: 100%;
-  min-height: 200em;
-}
+
