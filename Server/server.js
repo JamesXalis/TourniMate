@@ -3,7 +3,7 @@ const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
 
 const { typeDefs, resolvers } = require('./Schemas');
-const db = require('./config/connection');
+const db = require('./Config/connection');
 
 const { authMiddleware } = require('./Utils/Auth');
 
@@ -17,11 +17,11 @@ const server = new ApolloServer({
 const app = express();
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+    res.sendFile(path.join(__dirname, '../Client/build/index.html'));
 });
 
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '../client/build')));
+    app.use(express.static(path.join(__dirname, '../Client/build')));
 }
 
 app.use(express.urlencoded({ extended: false }));
