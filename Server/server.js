@@ -15,10 +15,6 @@ const server = new ApolloServer({
 
 const app = express();
 
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, '../Client/build/index.html'));
-});
-
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../Client/build')));
 }
@@ -29,6 +25,10 @@ app.use(express.json());
 const startApolloServer = async (typeDefs, resolvers) => {
     await server.start();
     server.applyMiddleware({ app });
+
+    app.get("*", (req, res) => {
+        res.sendFile(path.join(__dirname, '../Client/build/index.html'));
+    });
 
     db.once('open', () => {
         app.listen(PORT, () => {
