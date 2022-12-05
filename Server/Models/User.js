@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
-const { Tournament } = require('../Models');
+const { Tournament } = require('../Models/Index');
 
 const tournamentSchema = require('./Tournament')
 
