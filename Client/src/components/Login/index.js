@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { useMutation } from '@apollo/client'
 
@@ -34,8 +33,8 @@ const LoginForm = () => {
 
       Auth.login(data.loginUser.token);
 
-    } catch (err) {
-      console.error(err);
+    } catch (error) {
+      console.error(error);
       setShowAlert(true);
     }
 
@@ -46,15 +45,6 @@ const LoginForm = () => {
     });
   };
 
-
-  // run navigate courses when component mounts
-  // const navigate = useNavigate();
-
-  // const navigateCourses = () => {
-  //   if(Auth.loggedIn) {
-  //     navigate('/Courses')
-  //   }
-  // };
 
   return (
     <>
